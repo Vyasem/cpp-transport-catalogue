@@ -1,11 +1,11 @@
 #pragma once
 
 #include "transport_catalogue.h"
-#include<iostream>
-#include<unordered_map>
-#include<tuple>
-#include<deque>
-#include<vector>
+#include <iostream>
+#include <unordered_map>
+#include <tuple>
+#include <deque>
+#include <vector>
 
 namespace transport{
 	namespace input_read {
@@ -14,11 +14,11 @@ namespace transport{
 		}
 		class InputReader {
 		public:
-			InputReader(catalog::TransportCatalogue*, std::istream&, int);
-			void queryHandle();
-			void busHandle();
-			void stopHandle(std::string_view, std::string_view);
-			void distanceHandle();
+			InputReader(catalog::TransportCatalogue* catalog, std::istream& input, int lineCount);
+			void HandleQuery();
+			void HandleBus();
+			void HandleStop(std::string_view stopName, std::string_view stopStr);
+			void HandleDistance();
 		private:
 			std::vector<std::string> queries;
 			std::vector<std::pair<std::string_view, std::string_view>> buses;

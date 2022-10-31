@@ -7,22 +7,28 @@
 namespace transport {
 	namespace catalog {
 		struct Bus {
-			std::string_view name;
-			std::deque<std::string_view> stops;
-			bool loope;
+			std::string_view name = "";
+			std::deque<std::string_view> stops = {};
+			bool loope = false;
+			Bus() = default;
+			Bus(std::string_view name_, std::deque<std::string_view> stops_, bool loope_) :name(name_), stops(stops_), loope(loope_) {};
 		};
 
 		struct Stop {
-			std::string_view name;
-			geo::Coordinates coord;
+			std::string_view name = "";
+			geo::Coordinates coord = {0.0, 0.0};
+			Stop() = default;
+			Stop(std::string_view name_, geo::Coordinates coord_) :name(name_), coord(coord_) {};
 		};
 
 		struct Route {
-			std::string_view name;
-			size_t stops;
-			size_t uStops;
-			double length;
-			double curvature;
+			std::string_view name = "";
+			size_t stops = 0;
+			size_t uStops = 0;
+			double length = 0.0;
+			double curvature= 0.0;
+			Route() = default;
+			Route(std::string_view name_, size_t stops_, size_t uStops_, double length_, double curvature_) :name(name_), stops(stops_), uStops(uStops_), length(length_), curvature(curvature_) {};
 		};
 
 		struct StopLengthHasher {
@@ -38,14 +44,14 @@ namespace transport {
 			std::unordered_map<std::pair<Stop*, Stop*>, int, StopLengthHasher> distanceBwStops;
 		public:
 			explicit TransportCatalogue();
-			void AddStop(std::string_view, double, double);
-			void AddRoute(std::string_view, std::deque<std::string_view>, bool);
-			void SetDistance(std::tuple<std::string_view, std::string_view, int>);
-			const Bus* BusFind(std::string_view)const;
-			const Stop* StopFind(std::string_view)const;
-			const Route GetRoute(std::string_view);
-			const std::deque<std::string_view> GetStopBuses(std::string_view);
-			int GetDistance(std::pair<Stop*, Stop*>);
+			void AddStop(std::string_view stopName, const geo::Coordinates coordinates);
+			void AddRoute(std::string_view routeName, std::deque<std::string_view> stopsName, bool loope);
+			void SetDistance(std::string_view stopFrom, std::string_view stopTo, int distance);
+			const Bus* BusFind(std::string_view busName)const;
+			const Stop* StopFind(std::string_view stopName)const;
+			const Route GetRoute(std::string_view busName);
+			const std::deque<std::string_view> GetStopBuses(std::string_view stopName);
+			int GetDistance(Stop* stopFrom, Stop* stopTo);
 		};
 	}	
 }

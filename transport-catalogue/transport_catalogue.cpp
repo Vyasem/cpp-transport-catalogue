@@ -10,10 +10,10 @@ namespace transport {
 	namespace catalog {
 		TransportCatalogue::TransportCatalogue() {}
 
-		void TransportCatalogue::AddStop(std::string_view stopName, double latitude, double longitude) {
+		void TransportCatalogue::AddStop(std::string_view stopName, geo::Coordinates coordinates) {
 			Stop stop{
 				stopName,
-				{latitude, longitude}
+				coordinates
 			};
 			stops[stopName] = stop;
 		}
@@ -27,72 +27,62 @@ namespace transport {
 			routes[routeName] = bus;
 		}
 
-		void TransportCatalogue::SetDistance(std::tuple<std::string_view, std::string_view, int> distance) {
-			auto [stopFrom, stopTo, dis] = distance;
+		void TransportCatalogue::SetDistance(std::string_view stopFrom, std::string_view stopTo, int distance) {
 			if (stops.find(stopFrom) != stops.end() && stops.find(stopTo) != stops.end()) {
-				distanceBwStops[{&stops.at(stopFrom), & stops.at(stopTo)}] = dis;
+				distanceBwStops[{&stops.at(stopFrom), & stops.at(stopTo)}] = distance;
 			}
 		}
 
 		const Bus* TransportCatalogue::BusFind(std::string_view busName)const {
-			try {
-				return &(routes.at(busName));
-			}
-			catch (...) {
-				return {};
-			}
+			return &(routes.at(busName));
 		}
 
 		const Stop* TransportCatalogue::StopFind(std::string_view stopName)const {
-			try {
-				return &stops.at(stopName);
-			}
-			catch (...) {
-				return {};
-			}
+			return &stops.at(stopName);
 		}
 
 		const Route TransportCatalogue::GetRoute(std::string_view busName) {
-			const Bus* busInfo = BusFind(busName);
-			if (busInfo == NULL) {
-				return { busName, 0, 0, 0, 0 };
-			}
-			Route result;
-			result.name = busInfo->name;
-			result.stops = busInfo->stops.size();
-			result.length = 0;
-			result.curvature = 0;
+			try {
+				const Bus* busInfo = BusFind(busName);
+				Route result;
+				result.name = busInfo->name;
+				result.stops = busInfo->stops.size();
+				result.length = 0;
+				result.curvature = 0;
 
-			for (auto it = busInfo->stops.begin(); it != busInfo->stops.end() - 1; ++it) {
-				double curvature = geo::ComputeDistance(StopFind(*it)->coord, StopFind(*(it + 1))->coord);
-				double length = GetDistance({ &stops.at(*it),&stops.at(*(it + 1)) });
-				result.length += length;
-				if (length == 0) {
-					result.length += curvature;
-				}
-				result.curvature += curvature;
-
-			}
-
-			if (!busInfo->loope) {
-				for (auto it = busInfo->stops.end() - 1; it != busInfo->stops.begin(); --it) {
-					double curvature = geo::ComputeDistance(StopFind(*it)->coord, StopFind(*(it - 1))->coord);
-					double length = GetDistance({ &stops.at(*it),&stops.at(*(it - 1)) });
+				for (auto it = busInfo->stops.begin(); it != busInfo->stops.end() - 1; ++it) {
+					double curvature = geo::ComputeDistance(StopFind(*it)->coord, StopFind(*(it + 1))->coord);
+					double length = GetDistance(&stops.at(*it), &stops.at(*(it + 1)));
 					result.length += length;
 					if (length == 0) {
 						result.length += curvature;
 					}
 					result.curvature += curvature;
-				}
-				result.stops = busInfo->stops.size() * 2 - 1;
-			}
 
-			std::deque<std::string_view> st = busInfo->stops;
-			std::sort(st.begin(), st.end());
-			auto last = std::unique(st.begin(), st.end());
-			result.uStops = last - st.begin();
-			result.curvature = result.length / result.curvature;
-			return result;
+				}
+
+				if (!busInfo->loope) {
+					for (auto it = busInfo->stops.end() - 1; it != busInfo->stops.begin(); --it) {
+						double curvature = geo::ComputeDistance(StopFind(*it)->coord, StopFind(*(it - 1))->coord);
+						double length = GetDistance(&stops.at(*it), &stops.at(*(it - 1)));
+						result.length += length;
+						if (length == 0) {
+							result.length += curvature;
+						}
+						result.curvature += curvature;
+					}
+					result.stops = busInfo->stops.size() * 2 - 1;
+				}
+
+				std::deque<std::string_view> st = busInfo->stops;
+				std::sort(st.begin(), st.end());
+				auto last = std::unique(st.begin(), st.end());
+				result.uStops = last - st.begin();
+				result.curvature = result.length / result.curvature;
+				return result;
+			}catch (...) {
+				return { busName, 0, 0, 0, 0 };
+			}			
 		}
 
 		const std::deque<std::string_view> TransportCatalogue::GetStopBuses(std::string_view stopName) {
@@ -107,13 +97,13 @@ namespace transport {
 			return result;
 		}
 
-		int TransportCatalogue::GetDistance(std::pair<Stop*, Stop*> dist) {
-			if (distanceBwStops.find(dist) != distanceBwStops.end()) {
-				return distanceBwStops.at(dist);
+		int TransportCatalogue::GetDistance(Stop* stopFrom, Stop* stopTo) {
+			if (distanceBwStops.find({stopFrom, stopTo}) != distanceBwStops.end()) {
+				return distanceBwStops.at({stopFrom, stopTo});
 			}
 
-			if (distanceBwStops.find({ dist.second, dist.first }) != distanceBwStops.end()) {
-				return distanceBwStops.at({ dist.second, dist.first });
+			if (distanceBwStops.find({stopTo, stopFrom}) != distanceBwStops.end()) {
+				return distanceBwStops.at({stopTo, stopFrom});
 			}
 			return 0;
 		}
