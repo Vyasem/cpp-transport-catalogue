@@ -13,11 +13,9 @@
 namespace json {
 
     class Node;
-    // Сохраните объявления Dict и Array без изменения
-    using Dict = std::map<std::string, Node>;
+     using Dict = std::map<std::string, Node>;
     using Array = std::vector<Node>;
 
-    // Эта ошибка должна выбрасываться при ошибках парсинга JSON
     class ParsingError : public std::runtime_error {
     public:
         using runtime_error::runtime_error;
@@ -25,12 +23,11 @@ namespace json {
 
     class Node : private std::variant<std::nullptr_t, int, double, bool, std::string, Dict, Array> {
     public:
-        /* Реализуйте Node, используя std::variant */
         using variant::variant;
-
+        Node(const std::string_view& str):variant(std::string(str)) {}
         bool IsInt() const;
-        bool IsDouble() const; //Возвращает true, если в Node хранится int либо double.
-        bool IsPureDouble() const; //Возвращает true, если в Node хранится double.
+        bool IsDouble() const;
+        bool IsPureDouble() const;
         bool IsBool() const;
         bool IsString() const;
         bool IsNull() const;
@@ -63,4 +60,4 @@ namespace json {
     void PrintNode(const Node& root, std::ostream& output);
     void Print(const Document& doc, std::ostream& output);
 
-}  // namespace json
+}

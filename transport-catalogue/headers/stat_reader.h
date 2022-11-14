@@ -14,7 +14,7 @@ namespace transport {
 			void QueryHandle(std::string_view str);
 			void PrintEmptyStop(std::string_view stopName);
 			void PrintStop(const std::deque<std::string_view>& buses, std::string_view stopName);
-			void PrintRoute(const catalog::Route result);
+			void PrintRoute(const domain::Route result);
 		private:
 			catalog::TransportCatalogue* catalog_;
 		};

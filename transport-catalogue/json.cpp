@@ -284,35 +284,35 @@ namespace json {
         if (!IsArray()) {
             throw std::logic_error("It is not Array");
         }
-        return *std::get_if<Array>(this);
+        return std::get<Array>(*this);
     }
 
     const Dict& Node::AsMap() const {
         if (!IsMap()) {
             throw std::logic_error("It is not Map");
         }
-        return *std::get_if<Dict>(this);
+        return std::get<Dict>(*this);
     }
 
     int Node::AsInt() const {
         if (!IsInt()) {
             throw std::logic_error("It is not Integer");
         }
-        return *std::get_if<int>(this);
+        return std::get<int>(*this);
     }
 
     const string& Node::AsString() const {
         if (!IsString()) {
             throw std::logic_error("It is not string");
         }
-        return *std::get_if<std::string>(this);
+        return std::get<std::string>(*this);
     }
 
     bool Node::AsBool() const {
         if (!IsBool()) {
             throw std::logic_error("It is not boolean");
         }
-        return *std::get_if<bool>(this);
+        return std::get<bool>(*this);
     }
 
     double Node::AsDouble() const {
@@ -321,10 +321,10 @@ namespace json {
         }
 
         if (IsPureDouble()) {
-            return *std::get_if<double>(this);
+            return std::get<double>(*this);
         }
 
-        return *std::get_if<int>(this);
+        return std::get<int>(*this);
     }
 
     Document::Document(Node root)

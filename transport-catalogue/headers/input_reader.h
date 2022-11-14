@@ -19,6 +19,9 @@ namespace transport{
 			void HandleBus();
 			void HandleStop(std::string_view stopName, std::string_view stopStr);
 			void HandleDistance();
+			void ClearQuery() {
+				queries.clear();
+			}
 		private:
 			std::vector<std::string> queries;
 			std::vector<std::pair<std::string_view, std::string_view>> buses;

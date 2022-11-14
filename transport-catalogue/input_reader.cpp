@@ -78,7 +78,7 @@ namespace transport {
 					findChar = ">";
 				}
 				std::deque<std::string_view> bs = detail::SplitIntoWords(busStr, findChar);
-				catalog_->AddRoute(busName, bs, loope);
+				catalog_->AddRoute(busName, std::move(bs), loope);
 			}
 		}
 

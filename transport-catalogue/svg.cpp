@@ -7,13 +7,10 @@ namespace svg {
     void Object::Render(const RenderContext& context) const {
         context.RenderIndent();
 
-        // Делегируем вывод тега своим подклассам
         RenderObject(context);
 
         context.out << std::endl;
     }
-
-    // ---------- Circle ------------------
 
     Circle& Circle::SetCenter(Point center) {
         center_ = center;
@@ -28,7 +25,7 @@ namespace svg {
     void Circle::RenderObject(const RenderContext& context) const {
         auto& out = context.out;
         out << "<circle cx=\""sv << center_.x << "\" cy=\""sv << center_.y << "\" "sv;
-        out << "r=\""sv << radius_ << "\" "sv;
+        out << "r=\""sv << radius_ << "\""sv;
         RenderAttrs(context.out);
         out << "/>"sv;
     }
@@ -86,7 +83,9 @@ namespace svg {
 
     void Text::RenderObject(const RenderContext& context) const {
         auto& out = context.out;
-        out << "<text x=\""sv << pos_.x << "\" y=\""sv << pos_.y << "\" "sv;
+        out << "<text"sv;
+        RenderAttrs(context.out);
+        out << " x=\""sv << pos_.x << "\" y=\""sv << pos_.y << "\" "sv;
         out << "dx=\""sv << offset_.x << "\" dy=\""sv << offset_.y << "\" "sv;
         out << "font-size=\""sv << size_;
         if (!font_family_.empty()) {
@@ -97,8 +96,7 @@ namespace svg {
             out << "\" "sv;
             out << "font-weight=\""sv << font_weight_;
         }
-        out << "\""sv;
-        RenderAttrs(context.out);
+        out << "\""sv;        
         out << ">"sv;
         out << data_;
         out << "</text>";
@@ -149,4 +147,4 @@ namespace svg {
         }
         out << "</svg>"sv;
     }
-}  // namespace svg
+}

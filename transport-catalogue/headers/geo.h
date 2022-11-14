@@ -14,6 +14,12 @@ namespace transport {
             }
         };
 
+        struct CoordinateshHasher {
+            size_t operator()(Coordinates key) const {
+                return static_cast<size_t>(key.lat + key.lng);
+            }
+        };
+
         inline double ComputeDistance(Coordinates from, Coordinates to) {
             using namespace std;
             if (from == to) {

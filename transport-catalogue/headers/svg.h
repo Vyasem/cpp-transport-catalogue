@@ -74,10 +74,6 @@ namespace svg {
         double y = 0;
     };
 
-    /*
-     * Вспомогательная структура, хранящая контекст для вывода SVG-документа с отступами.
-     * Хранит ссылку на поток вывода, текущее значение и шаг отступа при выводе элемента
-     */
     struct RenderContext {
         RenderContext(std::ostream& out)
             : out(out) {
@@ -104,11 +100,6 @@ namespace svg {
         int indent = 0;
     };
 
-    /*
-     * Абстрактный базовый класс Object служит для унифицированного хранения
-     * конкретных тегов SVG-документа
-     * Реализует паттерн "Шаблонный метод" для вывода содержимого тега
-     */
     class Object {
     public:
         void Render(const RenderContext& context) const;
@@ -191,7 +182,6 @@ namespace svg {
                 case svg::StrokeLineCap::SQUARE: out << "square";  break;
                 }
                 out << "\""sv;
-                //out << " stroke-linecap=\""sv << stroke_line_cap_.value() << "\""sv;
             }
 
             if (stroke_line_join_) {
@@ -205,14 +195,11 @@ namespace svg {
                 case svg::StrokeLineJoin::ROUND: out << "round";  break;
                 }
                 out << "\""sv;
-                //out << " stroke-linejoin=\""sv << stroke_line_join_.value() << "\""sv;
             }
         }
 
     private:
         Owner& AsOwner() {
-            // static_cast безопасно преобразует *this к Owner&,
-            // если класс Owner — наследник PathProps
             return static_cast<Owner&>(*this);
         }
 
@@ -223,10 +210,6 @@ namespace svg {
         std::optional<StrokeLineJoin> stroke_line_join_;
     };
 
-    /*
-     * Класс Circle моделирует элемент <circle> для отображения круга
-     * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle
-     */
     class Circle final : public Object, public PathProps<Circle> {
     public:
         Circle& SetCenter(Point center);
@@ -237,13 +220,8 @@ namespace svg {
         double radius_ = 1.0;
     };
 
-    /*
-     * Класс Polyline моделирует элемент <polyline> для отображения ломаных линий
-     * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polyline
-     */
     class Polyline final : public Object, public PathProps<Polyline> {
     public:
-        // Добавляет очередную вершину к ломаной линии
         Polyline& AddPoint(Point point);
 
     private:
@@ -251,30 +229,14 @@ namespace svg {
         std::vector<Point> coordinates_;
     };
 
-    /*
-     * Класс Text моделирует элемент <text> для отображения текста
-     * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/text
-     */
     class Text final : public Object, public PathProps<Text> {
     public:
-        // Задаёт координаты опорной точки (атрибуты x и y)
-        Text& SetPosition(Point pos);
-
-        // Задаёт смещение относительно опорной точки (атрибуты dx, dy)
-        Text& SetOffset(Point offset);
-
-        // Задаёт размеры шрифта (атрибут font-size)
-        Text& SetFontSize(uint32_t size);
-
-        // Задаёт название шрифта (атрибут font-family)
+        Text& SetPosition(Point pos);       
+        Text& SetOffset(Point offset);        
+        Text& SetFontSize(uint32_t size);        
         Text& SetFontFamily(std::string font_family);
-
-        // Задаёт толщину шрифта (атрибут font-weight)
-        Text& SetFontWeight(std::string font_weight);
-
-        // Задаёт текстовое содержимое объекта (отображается внутри тега text)
+        Text& SetFontWeight(std::string font_weight);       
         Text& SetData(std::string data);
-
         std::string PrepareText(std::string data);
     private:
         void RenderObject(const RenderContext& context) const override;
@@ -286,21 +248,15 @@ namespace svg {
         std::string data_ = "";
     };
 
-
     class Document : public ObjectContainer {
     public:
         Document() = default;
         ~Document() = default;
 
-        // Добавляет в svg-документ объект-наследник svg::Object
         void AddPtr(std::unique_ptr<Object>&& obj) override;
-
-        // Выводит в ostream svg-представление документа
         void Render(std::ostream& out) const;
-
     private:
         std::vector<std::unique_ptr<Object>> objects_ptr_;
     };
-
-} // namespace svg
+} 
 

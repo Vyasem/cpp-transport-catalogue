@@ -25,7 +25,7 @@ namespace transport {
 			} else {
 				//Что бы вывести Stop not found;
 				try {
-					const catalog::Stop* stop = catalog_->StopFind(name);
+					const domain::Stop* stop = catalog_->StopFind(name);
 					PrintStop(catalog_->GetStopBuses(stop->name), stop->name);
 				}catch (...) {
 					PrintEmptyStop(name);
@@ -49,7 +49,7 @@ namespace transport {
 			}
 		}
 
-		void StatReader::PrintRoute(const catalog::Route result) {
+		void StatReader::PrintRoute(const domain::Route result) {
 			if (result.stops == 0) {
 				std::cout << "Bus " << result.name << ": not found\n";
 			} else {
