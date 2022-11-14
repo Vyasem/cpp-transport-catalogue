@@ -13,7 +13,7 @@
 
 namespace transport {
 	namespace domain {
-        using SettingType = std::variant<std::string, int, double, std::pair<double, double>, svg::Color, std::vector<svg::Color>>;
+        using SettingType = std::variant<double, std::pair<double, double>, svg::Color, std::vector<svg::Color>>;
 		struct Stop {
 			std::string name = "";
 			geo::Coordinates coord = { 0.0, 0.0 };
