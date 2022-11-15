@@ -45,7 +45,7 @@ void jsonTest() {
 	fs.open(filename);
 	if (fs.is_open()) {		
 		transport::json_reader::JsonReader reader(handler, fs);
-		reader.HandleData();
+		reader.HandleDataBase();
 		reader.HandleQuery();
 		reader.Print(std::cout);
 	}
@@ -60,7 +60,7 @@ void svgTest() {
 	fs.open(filename);
 	if (fs.is_open()) {
 		transport::json_reader::JsonReader reader(handler, fs);
-		reader.HandleData();
+		reader.HandleDataBase();
 		handler.DrawMap(std::cout);
 	}
 }
