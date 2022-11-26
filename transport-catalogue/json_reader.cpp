@@ -1,6 +1,7 @@
 #include "headers/json_reader.h"
 #include "headers/svg.h"
 #include "headers/json.h"
+#include "headers/json_builder.h"
 #include <iostream>
 #include <string>
 #include <unordered_map>
@@ -116,14 +117,35 @@ namespace json_reader {
 		std::optional<const std::deque<std::string_view>> stopBus = handler_.GetStopBuses(name);
 		if (stopBus.has_value()) {
 			if (stopBus.value().empty()) {
-				saveConatiner.push_back({ json::Dict{{"request_id", id}, {"buses", json::Array{}}} });
+				saveConatiner.push_back(json::Builder{}
+				.StartDict()
+					.Key("request_id"s)
+					.Value(id)
+					.Key("buses")
+					.Value(json::Array{})
+				.EndDict()
+				.Build());
 			}
 			else {
-				saveConatiner.push_back({ json::Dict{{"request_id", id}, {"buses", json::Array{stopBus.value().begin(), stopBus.value().end()}}} });
+				saveConatiner.push_back(json::Builder{}
+				.StartDict()
+					.Key("request_id"s)
+					.Value(id)
+					.Key("buses")
+					.Value(json::Array{stopBus.value().begin(), stopBus.value().end()})
+				.EndDict()
+				.Build());
 			}
 		}
-		else {
-			saveConatiner.push_back({ json::Dict{{"request_id", id}, {"error_message", "not found"s}} });
+		else {			
+			saveConatiner.push_back(json::Builder{}
+			.StartDict()
+				.Key("request_id"s)
+				.Value(id)
+				.Key("error_message"s)
+				.Value("not found"s)
+			.EndDict()
+			.Build());
 		}
 	}
 
@@ -132,13 +154,30 @@ namespace json_reader {
 		std::string_view name = bus.AsMap().at("name").AsString();
 		const domain::Route route = handler_.GetRoute(name);
 		if (route.stops == 0) {
-			saveConatiner.push_back({ json::Dict{{"request_id", id}, {"error_message", "not found"s}} });
+			saveConatiner.push_back(json::Builder{}
+			.StartDict()
+				.Key("request_id"s)
+				.Value(id)
+				.Key("error_message"s)
+				.Value("not found"s)
+			.EndDict()
+			.Build());
 		}
 		else {
-			saveConatiner.push_back({ json::Dict{{"request_id", id},
-					{"curvature", route.curvature},
-					{"route_length", route.length}, {"stop_count", static_cast<int>(route.stops)},
-					{"unique_stop_count", static_cast<int>(route.uStops)}} });
+			saveConatiner.push_back(json::Builder{}
+			.StartDict()
+				.Key("request_id"s)
+				.Value(id)
+				.Key("curvature"s)
+				.Value(route.curvature)
+				.Key("route_length"s)
+				.Value(route.length)
+				.Key("stop_count"s)
+				.Value(static_cast<int>(route.stops))
+				.Key("unique_stop_count"s)
+				.Value(static_cast<int>(route.uStops))
+			.EndDict()
+			.Build());			
 		}
 	}
 
@@ -146,7 +185,14 @@ namespace json_reader {
 		int id = map.AsMap().at("id").AsInt();
 		std::ostringstream out;
 		handler_.DrawMap(out);
-		saveConatiner.push_back({ json::Dict{{"request_id", id}, {"map", out.str()}} });
+		saveConatiner.push_back(json::Builder{}
+		.StartDict()
+			.Key("request_id"s)
+			.Value(id)
+			.Key("map")
+			.Value(out.str())
+		.EndDict()
+		.Build());
 	}
 
 	void JsonReader::HandleQuery() {

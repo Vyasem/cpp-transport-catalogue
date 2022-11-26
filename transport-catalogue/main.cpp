@@ -67,7 +67,7 @@ void svgTest() {
 
 int main() {
 	//inputTest();
-	jsonTest();
-	//svgTest();
+	//jsonTest();
+	svgTest();
 	return 0;
 }

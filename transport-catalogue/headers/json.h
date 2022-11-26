@@ -23,6 +23,7 @@ namespace json {
     class Node : private std::variant<std::nullptr_t, int, double, bool, std::string, Dict, Array> {
     public:
         using variant::variant;
+        using Value = variant;
         Node(const std::string_view& str):variant(std::string(str)) {}
         bool IsInt() const;
         bool IsDouble() const;
@@ -38,8 +39,23 @@ namespace json {
         int AsInt() const;
         const std::string& AsString() const;
         bool AsBool() const;
-        double AsDouble() const;
+        double AsDouble() const;        
+        bool Swap(Value&& val);
+        bool AddValue(Value&& val);
+        bool AddValue(std::string key, Value&& val);
+
+        const Value& GetValue() const {
+            return *this;
+        }
+
+        bool operator==(const Node& rhs) const {
+            return GetValue() == rhs.GetValue();
+        }        
     };
+
+    inline bool operator!=(const Node& lhs, const Node& rhs) {
+        return !(lhs == rhs);
+    }
 
     class Document {
     public:
@@ -50,6 +66,14 @@ namespace json {
     private:
         Node root_;
     };
+
+    inline bool operator==(const Document& lhs, const Document& rhs) {
+        return lhs.GetRoot() == rhs.GetRoot();
+    }
+
+    inline bool operator!=(const Document& lhs, const Document& rhs) {
+        return !(lhs == rhs);
+    }
 
     Document Load(std::istream& input);
 

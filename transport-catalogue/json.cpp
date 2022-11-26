@@ -325,6 +325,39 @@ namespace json {
         }
 
         return std::get<int>(*this);
+    }    
+
+    bool Node::Swap(Value&& val) {
+        this->swap(val);
+        return true;
+    }
+
+    bool Node::AddValue(Value&& val) {
+        if (IsMap()) {
+            return false;
+        }
+
+        if (IsArray()) {
+            Array& itemAr = std::get<Array>(*this);
+            Node newNode;
+            newNode.Swap(std::move(val));
+            itemAr.push_back(std::move(newNode));
+            return true;
+        }
+
+        this->swap(val);
+        return true;
+    }
+
+    bool Node::AddValue(std::string key, Value&& val) {
+        if (!IsMap()) {
+            return false;
+        }
+        Dict& itemDict = std::get<Dict>(*this);
+        Node newNode;
+        newNode.Swap(std::move(val));
+        itemDict[key] = std::move(newNode);
+        return true;
     }
 
     Document::Document(Node root)
@@ -418,6 +451,5 @@ namespace json {
     void Print(const Document& doc, std::ostream& output) {
         PrintNode(doc.GetRoot(), output);
     }
-
 
 }  // namespace json
