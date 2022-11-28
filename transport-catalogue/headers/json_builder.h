@@ -14,10 +14,7 @@ namespace json {
 	class Builder {
 	private:
 		Node root_;
-		std::vector<std::string> itemKeys_;
 		std::stack<Node*> queue_;
-		std::size_t dictcount = 0;
-		bool objectReady = false;
 	public:
 		Builder() = default;
 		KeyItemContext Key(std::string key);
@@ -29,44 +26,56 @@ namespace json {
 		Node Build();
 	};
 
-	class KeyItemContext {
-	private:
+	class ItemContext {
+	protected:
 		Builder& builder_;
+	public:
+		ItemContext(Builder& builder);
+		KeyItemContext Key(std::string key);
+		SingleValueItemContext Value(Node::Value value);
+		DictItemContext StartDict();
+		ArrayItemContext StartArray();
+		Builder& EndDict();
+		Builder& EndArray();
+		Node Build();
+	};
+
+	class KeyItemContext : public ItemContext {
 	public:
 		KeyItemContext(Builder& builder);
 		DictItemContext Value(Node::Value value);
-		DictItemContext StartDict();
-		ArrayItemContext StartArray();
+		KeyItemContext Key(std::string key) = delete;
+		Builder& EndDict() = delete;
+		Builder& EndArray() = delete;
+		Node Build() = delete;
 	};
 
-	class SingleValueItemContext {
-	private:
-		Builder& builder_;
+	class SingleValueItemContext : public ItemContext {
 	public:
 		SingleValueItemContext(Builder& builder);
-		Builder& EndArray();
-		Node Build() {
-			return builder_.Build();
-		}
+		KeyItemContext Key(std::string key) = delete;
+		SingleValueItemContext Value(Node::Value value) = delete;
+		DictItemContext StartDict() = delete;
+		ArrayItemContext StartArray() = delete;
+		Builder& EndDict() = delete;
 	};
 
-	class DictItemContext {
-	private:
-		Builder& builder_;
+	class DictItemContext : public ItemContext {
 	public:
 		DictItemContext(Builder& builder);
-		KeyItemContext Key(std::string key);
-		Builder& EndDict();
+		SingleValueItemContext Value(Node::Value value) = delete;
+		DictItemContext StartDict() = delete;
+		ArrayItemContext StartArray() = delete;
+		Builder& EndArray() = delete;
+		Node Build() = delete;
 	};
 
-	class ArrayItemContext {
-	private:
-		Builder& builder_;
+	class ArrayItemContext : public ItemContext {
 	public:
 		ArrayItemContext(Builder& builder);
 		ArrayItemContext Value(Node::Value value);
-		DictItemContext StartDict();
-		ArrayItemContext StartArray();
-		Builder& EndArray();
+		KeyItemContext Key(std::string key) = delete;
+		Builder& EndDict() = delete;
+		Node Build() = delete;
 	};
 }

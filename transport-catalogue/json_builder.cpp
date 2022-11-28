@@ -2,76 +2,68 @@
 #include <iostream>
 #include <exception>
 #include <utility>
-#include <variant>
+#include <type_traits>
 
 namespace json {
 
 	KeyItemContext Builder::Key(std::string key) {
-		if (queue_.empty() || !queue_.top()->IsMap() || itemKeys_.size() >= dictcount) {
+		if (queue_.empty() || !queue_.top()->IsMap()) {
 			throw std::logic_error("Dictonary not found, or value expected");
 		}
-
-		itemKeys_.push_back(std::move(key));
-		//return *this;
+		queue_.push(new Node(std::move(key)));
 		return { *this };
 	}
 
 	SingleValueItemContext Builder::Value(Node::Value value) {
-		if (objectReady) {
+		if (queue_.empty() && root_.GetValue().index() != 0) {
 			throw std::logic_error("Object already ready");
 		}
 
 		if (queue_.empty()) {
 			root_.Swap(std::move(value));
-			objectReady = true;
 		}
 		else {
-			if (itemKeys_.size() != dictcount) {
-				throw std::logic_error("Dictonary key not found");
-			}
 			Node* last = queue_.top();
-			if (last->IsMap()) {
-				last->AddValue(itemKeys_.back(), std::move(value));
-				itemKeys_.pop_back();
-			}
-			else if (last->IsArray()) {
+			if (last->IsArray()) {
 				last->AddValue(std::move(value));
+			}
+			else {
+				std::string key = last->AsString();
+				queue_.pop();
+				queue_.top()->AddValue(last->AsString(), std::move(value));
 			}
 		}
 		return { *this };
-		//return *this;
 	}
 
 	DictItemContext Builder::StartDict() {
-		if (!queue_.empty() && queue_.top()->IsMap() && itemKeys_.empty()) {
+		if (!queue_.empty() && queue_.top()->IsMap()) {
 			throw std::logic_error("Dictonary key expected");
 		}
 		queue_.push(new Node(Dict{}));
-		++dictcount;
-		//return *this;
 		return { *this };
 	}
 
 	Builder& Builder::EndDict() {
-		if (queue_.empty() || !queue_.top()->IsMap() || itemKeys_.size() >= dictcount) {
-			throw std::logic_error("Dictonary not found");
+		if (queue_.empty() || !queue_.top()->IsMap()) {
+			throw std::logic_error("Array not found");
 		}
-		--dictcount;
+
 		Node top = std::move(*(queue_.top()));
 		queue_.pop();
+
 		if (queue_.empty()) {
 			root_ = std::move(top);
-			objectReady = true;
 		}
 		else {
 			Node* parent = queue_.top();
-			if (parent->IsMap()) {
-				parent->AddValue(itemKeys_.back(), top.AsMap());
-				itemKeys_.pop_back();
-			}
-
 			if (parent->IsArray()) {
 				parent->AddValue(top.AsMap());
+			}
+			else {
+				std::string key = parent->AsString();
+				queue_.pop();
+				queue_.top()->AddValue(key, top.AsMap());
 			}
 		}
 
@@ -79,15 +71,7 @@ namespace json {
 	}
 
 	ArrayItemContext Builder::StartArray() {
-		if (objectReady) {
-			throw std::logic_error("Object already ready");
-		}
-
-		if (itemKeys_.size() != dictcount) {
-			throw std::logic_error("Dictonary key expected");
-		}
 		queue_.push(new Node(Array{}));
-		//return *this;
 		return { *this };
 	}
 
@@ -100,72 +84,69 @@ namespace json {
 		queue_.pop();
 		if (queue_.empty()) {
 			root_ = std::move(top);
-			objectReady = true;
 		}
 		else {
 			Node* parent = queue_.top();
-			if (parent->IsMap()) {
-				parent->AddValue(itemKeys_.back(), top.AsArray());
-				itemKeys_.pop_back();
-			}
-
 			if (parent->IsArray()) {
 				parent->AddValue(top.AsArray());
+			}
+			else {
+				std::string key = parent->AsString();
+				queue_.pop();
+				queue_.top()->AddValue(key, top.AsArray());
 			}
 		}
 		return *this;
 	}
 
 	Node Builder::Build() {
-		if (!objectReady || !queue_.empty()) {
+		if (!queue_.empty() || root_.GetValue().index() == 0) {
 			throw std::logic_error("Object not ready");
 		}
 		return root_;
 	}
 
-	KeyItemContext::KeyItemContext(Builder& builder) :builder_(builder) {}
-	DictItemContext KeyItemContext::Value(Node::Value value) {
-		builder_.Value(value);
-		return { builder_ };
-	}
-
-	DictItemContext KeyItemContext::StartDict() {
-		return builder_.StartDict();
-	}
-
-	ArrayItemContext KeyItemContext::StartArray() {
-		return builder_.StartArray();
-	}
-
-	SingleValueItemContext::SingleValueItemContext(Builder& builder) :builder_(builder) {}
-	Builder& SingleValueItemContext::EndArray() {
-		return builder_.EndArray();
-	}
-
-	DictItemContext::DictItemContext(Builder& builder) :builder_(builder) {}
-	KeyItemContext DictItemContext::Key(std::string key) {
+	ItemContext::ItemContext(Builder& builder) : builder_(builder) {}
+	KeyItemContext ItemContext::Key(std::string key) {
 		return builder_.Key(key);
 	}
 
-	Builder& DictItemContext::EndDict() {
-		return builder_.EndDict();
+	SingleValueItemContext ItemContext::Value(Node::Value value) {
+		return builder_.Value(value);
 	}
 
-	ArrayItemContext::ArrayItemContext(Builder& builder) :builder_(builder) {}
-	ArrayItemContext ArrayItemContext::Value(Node::Value value) {
-		builder_.Value(value);
-		return { builder_ };
-	}
-
-	DictItemContext ArrayItemContext::StartDict() {
+	DictItemContext ItemContext::StartDict() {
 		return builder_.StartDict();
 	}
 
-	ArrayItemContext ArrayItemContext::StartArray() {
+	ArrayItemContext ItemContext::StartArray() {
 		return builder_.StartArray();
 	}
 
-	Builder& ArrayItemContext::EndArray() {
+	Builder& ItemContext::EndDict() {
+		return builder_.EndDict();
+	}
+
+	Builder& ItemContext::EndArray() {
 		return builder_.EndArray();
+	}
+
+	Node ItemContext::Build() {
+		return builder_.Build();
+	}
+
+	KeyItemContext::KeyItemContext(Builder& builder) : ItemContext(builder) {}
+	SingleValueItemContext::SingleValueItemContext(Builder& builder) : ItemContext(builder) {}
+	DictItemContext::DictItemContext(Builder& builder) : ItemContext(builder) {}
+	ArrayItemContext::ArrayItemContext(Builder& builder) : ItemContext(builder) {}
+
+	DictItemContext KeyItemContext::Value(Node::Value value) {
+		ItemContext::Value(value);
+		return { builder_ };
+	}
+
+	ArrayItemContext ArrayItemContext::Value(Node::Value value) {
+		ItemContext::Value(value);
+		return { builder_ };
 	}
 }
