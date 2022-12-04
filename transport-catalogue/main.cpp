@@ -20,7 +20,6 @@
 void inputTest() {
 	transport::catalog::TransportCatalogue tCatalog;	
 	int queryInCount;
-	//std::string filename = "cpp-transport-catalogue/transport-catalogue/Examples/tsC_case3_input.txt";
 	std::string filename = "cpp-transport-catalogue/transport-catalogue/Examples/test.txt";
 	std::fstream fs;
 	fs.open(filename);
@@ -67,7 +66,7 @@ void svgTest() {
 
 int main() {
 	//inputTest();
-	//jsonTest();
+	jsonTest();
 	svgTest();
 	return 0;
 }
