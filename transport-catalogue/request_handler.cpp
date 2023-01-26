@@ -10,7 +10,7 @@
 
 namespace transport {
 namespace request {
-	RequestHandler::RequestHandler(catalog::TransportCatalogue& catalog, render::MapRenderer& map) : catalog_(catalog), map_(map) {}
+	RequestHandler::RequestHandler(catalog::TransportCatalogue& catalog) : catalog_(catalog){}
 	void RequestHandler::CreateCatalog(const std::unordered_map<std::string_view, std::pair<std::deque<std::string_view>, bool>>& buses,
 		const std::unordered_map<std::string_view, std::pair<double, double>>& stops, 
 		const std::vector<domain::DistanceBwStops>& stopsDistance) {
@@ -43,6 +43,21 @@ namespace request {
 
 	void RequestHandler::SetRenderSettings(std::unordered_map<std::string, domain::SettingType> settings) {
 		map_.SetSettings(settings);
+	}
+
+	void RequestHandler::SetRouteSettings(std::unordered_map<std::string, double> settings) {
+		route_.SetSettings(std::move(settings));
+	}
+
+	void RequestHandler::CreateRoute() {
+		route_.CreateRoutes(catalog_);
+	}
+
+	const std::optional<domain::Trip>& RequestHandler::FindRoute(std::string_view from, std::string_view to) {
+		const domain::Stop* fromPtr = catalog_.StopFind(from);
+		const domain::Stop* toPtr = catalog_.StopFind(to);
+		route_.FindRoute(fromPtr, toPtr);
+		return route_.GetReadyRoute();
 	}
 
 	void RequestHandler::DrawMap(std::ostream& out) {

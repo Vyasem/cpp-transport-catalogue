@@ -15,11 +15,12 @@ namespace transport {
 namespace domain {
     using SettingType = std::variant<double, std::pair<double, double>, svg::Color, std::vector<svg::Color>>;
 
-    struct Stop {
+    struct Stop {        
         std::string name = "";
         geo::Coordinates coord = { 0.0, 0.0 };
+        size_t id = 0;
         Stop() = default;
-        Stop(std::string_view name_, geo::Coordinates coord_) :name(name_), coord(coord_) {};
+        Stop(std::string_view name_, geo::Coordinates coord_, size_t id_) :name(name_), coord(coord_), id(id_) {};
         bool operator==(const Stop& other) const {
             return name == other.name;
         }
@@ -53,7 +54,7 @@ namespace domain {
     };
 
 	struct StopLengthHasher {
-		size_t operator()(std::pair<Stop*, Stop*> key) const {
+		size_t operator()(std::pair<const Stop*, const Stop*> key) const {
 			return static_cast<size_t>(key.first->name.size() * key.first->coord.lat * key.first->coord.lng * key.second->name.size() * key.second->coord.lat * key.second->coord.lng);
 		}
 	};    
@@ -65,5 +66,17 @@ namespace domain {
         DistanceBwStops() = default;
         DistanceBwStops(std::string_view from, std::string_view to, int distance) :fromStop_(from), toStop_(to), distance_(distance) {};
     };
+
+    struct TripAction {
+        std::string type;
+        double time = 0.0;
+        std::string_view stopBusName;
+        int spanCount = 0;
+    };
+
+    struct Trip {
+        double totalTime = 0.0;
+        std::vector<domain::TripAction> items;
+    };    
 }
 }

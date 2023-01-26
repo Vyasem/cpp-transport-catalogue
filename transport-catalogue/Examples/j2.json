@@ -1,0 +1,3752 @@
+{
+  "is_roundtrip": false,
+  "name": "84k",
+  "stops": [
+    "Vnukovo",
+    "Troparyovo",
+    "Pr Vernadskogo 30",
+    "Pr Vernadskogo 50",
+    "Pr Vernadskogo 60",
+    "Luzhniki",
+    "Yandex",
+    "Ostozhenka 20",
+    "Ostozhenka 40",
+    "Ostozhenka 70",
+    "Ostozhenka 90",
+    "Kremlin",
+    "Manezh",
+    "Tverskaya ul 10",
+    "Tverskaya ul 20",
+    "Tverskaya ul 30",
+    "Tverskaya ul 50",
+    "Tverskaya ul 60",
+    "Tverskaya ul 100",
+    "Belorusskiy vokzal",
+    "Sokol",
+    "Leningradskoye sh 30",
+    "Leningradskoye sh 40",
+    "Leningradskoye sh 50",
+    "Leningradskoye sh 60",
+    "Leningradskoye sh 70",
+    "Leningradskoye sh 80",
+    "Khimki",
+    "Sheremetyevo"
+  ],
+  "type": "Bus"
+},
+        {
+            "is_roundtrip": false,
+            "name": "85k",
+            "stops": [
+                "Vnukovo",
+                "Troparyovo",
+                "Luzhniki",
+                "Yandex",
+                "Kremlin",
+                "Mokhovaya ul 30",
+                "Mokhovaya ul 60",
+                "Mokhovaya ul 90",
+                "Manezh",
+                "Belorusskiy vokzal",
+                "Leningradskiy pr 20",
+                "Leningradskiy pr 70",
+                "Sokol",
+                "Khimki",
+                "Mezhdunarodnoye sh 30",
+                "Mezhdunarodnoye sh 90",
+                "Mezhdunarodnoye sh 100",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "86k",
+            "stops": [
+                "Vnukovo",
+                "Troparyovo",
+                "Pr Vernadskogo 80",
+                "Luzhniki",
+                "Yandex",
+                "Kremlin",
+                "Manezh",
+                "Tverskaya ul 30",
+                "Tverskaya ul 50",
+                "Belorusskiy vokzal",
+                "Sokol",
+                "Leningradskoye sh 10",
+                "Khimki",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "87k",
+            "stops": [
+                "Vnukovo",
+                "Troparyovo",
+                "Luzhniki",
+                "Yandex",
+                "Kremlin",
+                "Manezh",
+                "Belorusskiy vokzal",
+                "Sokol",
+                "Khimki",
+                "Mezhdunarodnoye sh 30",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "88k",
+            "stops": [
+                "Vnukovo",
+                "Troparyovo",
+                "Pr Vernadskogo 20",
+                "Pr Vernadskogo 30",
+                "Pr Vernadskogo 40",
+                "Pr Vernadskogo 50",
+                "Pr Vernadskogo 80",
+                "Pr Vernadskogo 90",
+                "Pr Vernadskogo 100",
+                "Luzhniki",
+                "Yandex",
+                "Ostozhenka 10",
+                "Ostozhenka 40",
+                "Ostozhenka 70",
+                "Ostozhenka 90",
+                "Ostozhenka 100",
+                "Kremlin",
+                "Manezh",
+                "Tverskaya ul 10",
+                "Tverskaya ul 40",
+                "Tverskaya ul 70",
+                "Tverskaya ul 80",
+                "Tverskaya ul 90",
+                "Tverskaya ul 100",
+                "Belorusskiy vokzal",
+                "Sokol",
+                "Leningradskoye sh 20",
+                "Leningradskoye sh 40",
+                "Leningradskoye sh 50",
+                "Leningradskoye sh 60",
+                "Leningradskoye sh 70",
+                "Leningradskoye sh 80",
+                "Leningradskoye sh 90",
+                "Khimki",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "89",
+            "stops": [
+                "Vnukovo",
+                "Troparyovo",
+                "Luzhniki",
+                "Komsomolskiy pr 10",
+                "Komsomolskiy pr 50",
+                "Komsomolskiy pr 70",
+                "Yandex",
+                "Kremlin",
+                "Mokhovaya ul 20",
+                "Mokhovaya ul 100",
+                "Manezh",
+                "Belorusskiy vokzal",
+                "Leningradskiy pr 60",
+                "Sokol",
+                "Khimki",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "90k",
+            "stops": [
+                "Vnukovo",
+                "Troparyovo",
+                "Pr Vernadskogo 10",
+                "Pr Vernadskogo 20",
+                "Pr Vernadskogo 30",
+                "Pr Vernadskogo 50",
+                "Pr Vernadskogo 90",
+                "Pr Vernadskogo 100",
+                "Luzhniki",
+                "Yandex",
+                "Ostozhenka 20",
+                "Ostozhenka 30",
+                "Ostozhenka 40",
+                "Ostozhenka 60",
+                "Ostozhenka 80",
+                "Kremlin",
+                "Manezh",
+                "Tverskaya ul 10",
+                "Tverskaya ul 20",
+                "Tverskaya ul 40",
+                "Tverskaya ul 60",
+                "Tverskaya ul 70",
+                "Tverskaya ul 90",
+                "Tverskaya ul 100",
+                "Belorusskiy vokzal",
+                "Sokol",
+                "Leningradskoye sh 10",
+                "Leningradskoye sh 40",
+                "Leningradskoye sh 60",
+                "Leningradskoye sh 80",
+                "Leningradskoye sh 90",
+                "Leningradskoye sh 100",
+                "Khimki",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "91",
+            "stops": [
+                "Vnukovo",
+                "Kiyevskoye sh 40",
+                "Kiyevskoye sh 50",
+                "Kiyevskoye sh 60",
+                "Kiyevskoye sh 70",
+                "Troparyovo",
+                "Luzhniki",
+                "Komsomolskiy pr 20",
+                "Komsomolskiy pr 30",
+                "Komsomolskiy pr 60",
+                "Komsomolskiy pr 70",
+                "Komsomolskiy pr 80",
+                "Komsomolskiy pr 90",
+                "Yandex",
+                "Kremlin",
+                "Mokhovaya ul 10",
+                "Mokhovaya ul 20",
+                "Mokhovaya ul 60",
+                "Mokhovaya ul 70",
+                "Mokhovaya ul 80",
+                "Mokhovaya ul 90",
+                "Mokhovaya ul 100",
+                "Manezh",
+                "Belorusskiy vokzal",
+                "Leningradskiy pr 20",
+                "Leningradskiy pr 40",
+                "Leningradskiy pr 60",
+                "Leningradskiy pr 80",
+                "Sokol",
+                "Khimki",
+                "Mezhdunarodnoye sh 10",
+                "Mezhdunarodnoye sh 50",
+                "Mezhdunarodnoye sh 60",
+                "Mezhdunarodnoye sh 70",
+                "Mezhdunarodnoye sh 80",
+                "Mezhdunarodnoye sh 90",
+                "Mezhdunarodnoye sh 100",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "92k",
+            "stops": [
+                "Vnukovo",
+                "Troparyovo",
+                "Pr Vernadskogo 10",
+                "Pr Vernadskogo 20",
+                "Pr Vernadskogo 40",
+                "Pr Vernadskogo 90",
+                "Pr Vernadskogo 100",
+                "Luzhniki",
+                "Yandex",
+                "Ostozhenka 10",
+                "Ostozhenka 20",
+                "Ostozhenka 40",
+                "Ostozhenka 50",
+                "Ostozhenka 70",
+                "Ostozhenka 80",
+                "Ostozhenka 90",
+                "Kremlin",
+                "Manezh",
+                "Tverskaya ul 10",
+                "Tverskaya ul 20",
+                "Tverskaya ul 40",
+                "Tverskaya ul 50",
+                "Tverskaya ul 70",
+                "Tverskaya ul 90",
+                "Tverskaya ul 100",
+                "Belorusskiy vokzal",
+                "Sokol",
+                "Leningradskoye sh 30",
+                "Leningradskoye sh 70",
+                "Leningradskoye sh 80",
+                "Leningradskoye sh 90",
+                "Leningradskoye sh 100",
+                "Khimki",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "93k",
+            "stops": [
+                "Vnukovo",
+                "Kiyevskoye sh 50",
+                "Troparyovo",
+                "Luzhniki",
+                "Komsomolskiy pr 20",
+                "Komsomolskiy pr 40",
+                "Komsomolskiy pr 50",
+                "Komsomolskiy pr 60",
+                "Yandex",
+                "Kremlin",
+                "Mokhovaya ul 10",
+                "Mokhovaya ul 80",
+                "Manezh",
+                "Belorusskiy vokzal",
+                "Leningradskiy pr 10",
+                "Leningradskiy pr 80",
+                "Sokol",
+                "Khimki",
+                "Mezhdunarodnoye sh 80",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "94k",
+            "stops": [
+                "Vnukovo",
+                "Troparyovo",
+                "Pr Vernadskogo 30",
+                "Luzhniki",
+                "Yandex",
+                "Ostozhenka 80",
+                "Kremlin",
+                "Manezh",
+                "Tverskaya ul 20",
+                "Belorusskiy vokzal",
+                "Sokol",
+                "Leningradskoye sh 10",
+                "Khimki",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "95",
+            "stops": [
+                "Vnukovo",
+                "Kiyevskoye sh 10",
+                "Kiyevskoye sh 20",
+                "Kiyevskoye sh 30",
+                "Kiyevskoye sh 40",
+                "Kiyevskoye sh 50",
+                "Kiyevskoye sh 60",
+                "Kiyevskoye sh 80",
+                "Kiyevskoye sh 90",
+                "Troparyovo",
+                "Luzhniki",
+                "Komsomolskiy pr 20",
+                "Komsomolskiy pr 40",
+                "Komsomolskiy pr 60",
+                "Komsomolskiy pr 80",
+                "Komsomolskiy pr 90",
+                "Komsomolskiy pr 100",
+                "Yandex",
+                "Kremlin",
+                "Mokhovaya ul 10",
+                "Mokhovaya ul 20",
+                "Mokhovaya ul 30",
+                "Mokhovaya ul 40",
+                "Mokhovaya ul 50",
+                "Mokhovaya ul 60",
+                "Mokhovaya ul 70",
+                "Mokhovaya ul 80",
+                "Mokhovaya ul 90",
+                "Mokhovaya ul 100",
+                "Manezh",
+                "Belorusskiy vokzal",
+                "Leningradskiy pr 10",
+                "Leningradskiy pr 20",
+                "Leningradskiy pr 40",
+                "Leningradskiy pr 50",
+                "Leningradskiy pr 80",
+                "Leningradskiy pr 90",
+                "Leningradskiy pr 100",
+                "Sokol",
+                "Khimki",
+                "Mezhdunarodnoye sh 10",
+                "Mezhdunarodnoye sh 30",
+                "Mezhdunarodnoye sh 40",
+                "Mezhdunarodnoye sh 50",
+                "Mezhdunarodnoye sh 60",
+                "Mezhdunarodnoye sh 70",
+                "Mezhdunarodnoye sh 80",
+                "Mezhdunarodnoye sh 90",
+                "Mezhdunarodnoye sh 100",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "96",
+            "stops": [
+                "Vnukovo",
+                "Troparyovo",
+                "Pr Vernadskogo 40",
+                "Luzhniki",
+                "Yandex",
+                "Ostozhenka 10",
+                "Ostozhenka 50",
+                "Kremlin",
+                "Manezh",
+                "Tverskaya ul 40",
+                "Belorusskiy vokzal",
+                "Sokol",
+                "Khimki",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "97",
+            "stops": [
+                "Vnukovo",
+                "Kiyevskoye sh 10",
+                "Kiyevskoye sh 30",
+                "Kiyevskoye sh 40",
+                "Kiyevskoye sh 80",
+                "Kiyevskoye sh 90",
+                "Troparyovo",
+                "Luzhniki",
+                "Komsomolskiy pr 10",
+                "Komsomolskiy pr 30",
+                "Komsomolskiy pr 40",
+                "Komsomolskiy pr 50",
+                "Komsomolskiy pr 60",
+                "Komsomolskiy pr 70",
+                "Komsomolskiy pr 80",
+                "Komsomolskiy pr 90",
+                "Komsomolskiy pr 100",
+                "Yandex",
+                "Kremlin",
+                "Mokhovaya ul 20",
+                "Mokhovaya ul 30",
+                "Mokhovaya ul 60",
+                "Mokhovaya ul 70",
+                "Mokhovaya ul 80",
+                "Mokhovaya ul 90",
+                "Manezh",
+                "Belorusskiy vokzal",
+                "Leningradskiy pr 20",
+                "Leningradskiy pr 30",
+                "Leningradskiy pr 50",
+                "Leningradskiy pr 60",
+                "Leningradskiy pr 70",
+                "Leningradskiy pr 80",
+                "Sokol",
+                "Khimki",
+                "Mezhdunarodnoye sh 10",
+                "Mezhdunarodnoye sh 60",
+                "Mezhdunarodnoye sh 80",
+                "Mezhdunarodnoye sh 90",
+                "Mezhdunarodnoye sh 100",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "98",
+            "stops": [
+                "Vnukovo",
+                "Troparyovo",
+                "Pr Vernadskogo 40",
+                "Pr Vernadskogo 50",
+                "Pr Vernadskogo 70",
+                "Pr Vernadskogo 100",
+                "Luzhniki",
+                "Yandex",
+                "Ostozhenka 10",
+                "Ostozhenka 20",
+                "Ostozhenka 30",
+                "Ostozhenka 80",
+                "Ostozhenka 100",
+                "Kremlin",
+                "Manezh",
+                "Tverskaya ul 50",
+                "Tverskaya ul 60",
+                "Tverskaya ul 80",
+                "Belorusskiy vokzal",
+                "Sokol",
+                "Leningradskoye sh 10",
+                "Leningradskoye sh 30",
+                "Leningradskoye sh 50",
+                "Leningradskoye sh 80",
+                "Khimki",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "99k",
+            "stops": [
+                "Vnukovo",
+                "Kiyevskoye sh 50",
+                "Kiyevskoye sh 60",
+                "Kiyevskoye sh 80",
+                "Kiyevskoye sh 100",
+                "Troparyovo",
+                "Luzhniki",
+                "Komsomolskiy pr 20",
+                "Komsomolskiy pr 80",
+                "Yandex",
+                "Kremlin",
+                "Mokhovaya ul 50",
+                "Mokhovaya ul 60",
+                "Manezh",
+                "Belorusskiy vokzal",
+                "Leningradskiy pr 20",
+                "Leningradskiy pr 60",
+                "Leningradskiy pr 80",
+                "Sokol",
+                "Khimki",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        },
+        {
+            "is_roundtrip": false,
+            "name": "100k",
+            "stops": [
+                "Vnukovo",
+                "Troparyovo",
+                "Pr Vernadskogo 10",
+                "Pr Vernadskogo 20",
+                "Pr Vernadskogo 30",
+                "Pr Vernadskogo 40",
+                "Pr Vernadskogo 50",
+                "Pr Vernadskogo 60",
+                "Pr Vernadskogo 70",
+                "Pr Vernadskogo 80",
+                "Pr Vernadskogo 90",
+                "Pr Vernadskogo 100",
+                "Luzhniki",
+                "Yandex",
+                "Ostozhenka 10",
+                "Ostozhenka 20",
+                "Ostozhenka 30",
+                "Ostozhenka 40",
+                "Ostozhenka 50",
+                "Ostozhenka 60",
+                "Ostozhenka 70",
+                "Ostozhenka 80",
+                "Ostozhenka 90",
+                "Ostozhenka 100",
+                "Kremlin",
+                "Manezh",
+                "Tverskaya ul 10",
+                "Tverskaya ul 30",
+                "Tverskaya ul 40",
+                "Tverskaya ul 70",
+                "Tverskaya ul 80",
+                "Tverskaya ul 90",
+                "Tverskaya ul 100",
+                "Belorusskiy vokzal",
+                "Sokol",
+                "Leningradskoye sh 10",
+                "Leningradskoye sh 40",
+                "Leningradskoye sh 50",
+                "Leningradskoye sh 60",
+                "Leningradskoye sh 70",
+                "Leningradskoye sh 80",
+                "Leningradskoye sh 90",
+                "Leningradskoye sh 100",
+                "Khimki",
+                "Sheremetyevo"
+            ],
+            "type": "Bus"
+        }
+    ],
+    "render_settings": {
+        "bus_label_font_size": 20,
+        "bus_label_offset": [
+            7,
+            15
+        ],
+        "color_palette": [
+            "green",
+            [
+                255,
+                160,
+                0
+            ],
+            "red"
+        ],
+        "height": 200,
+        "line_width": 14,
+        "padding": 30,
+        "stop_label_font_size": 20,
+        "stop_label_offset": [
+            7,
+            -3
+        ],
+        "stop_radius": 5,
+        "underlayer_color": [
+            255,
+            255,
+            255,
+            0.85
+        ],
+        "underlayer_width": 3,
+        "width": 200
+    },
+    "routing_settings": {
+        "bus_velocity": 280,
+        "bus_wait_time": 490
+    },
+    "stat_requests": [
+        {
+            "from": "Komsomolskiy pr 20",
+            "id": 1607592307,
+            "to": "Leningradskiy pr 80",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 20",
+            "id": 1918086003,
+            "to": "Komsomolskiy pr 80",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 10",
+            "id": 1705878213,
+            "to": "Mezhdunarodnoye sh 100",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 40",
+            "id": 1032258749,
+            "to": "Leningradskiy pr 60",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 20",
+            "id": 862750239,
+            "to": "Ostozhenka 20",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 60",
+            "id": 1465104363,
+            "to": "Pr Vernadskogo 20",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskiy pr 20",
+            "id": 8645483,
+            "to": "Manezh",
+            "type": "Route"
+        },
+        {
+            "id": 1695724973,
+            "name": "Pr Vernadskogo 90",
+            "type": "Stop"
+        },
+        {
+            "from": "Ostozhenka 60",
+            "id": 1513592365,
+            "to": "Kiyevskoye sh 40",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 70",
+            "id": 141699407,
+            "to": "Kremlin",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 20",
+            "id": 220233995,
+            "to": "Mokhovaya ul 40",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 10",
+            "id": 875126660,
+            "to": "Ostozhenka 100",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 10",
+            "id": 1054087408,
+            "to": "Mokhovaya ul 80",
+            "type": "Route"
+        },
+        {
+            "id": 1529735027,
+            "name": "50",
+            "type": "Bus"
+        },
+        {
+            "id": 884992097,
+            "name": "81",
+            "type": "Bus"
+        },
+        {
+            "id": 2102040328,
+            "name": "67",
+            "type": "Bus"
+        },
+        {
+            "from": "Pr Vernadskogo 50",
+            "id": 1107201585,
+            "to": "Leningradskiy pr 80",
+            "type": "Route"
+        },
+        {
+            "id": 1321456988,
+            "name": "Mezhdunarodnoye sh 100",
+            "type": "Stop"
+        },
+        {
+            "from": "Komsomolskiy pr 80",
+            "id": 1054310039,
+            "to": "Pr Vernadskogo 60",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 80",
+            "id": 2031874307,
+            "to": "Komsomolskiy pr 70",
+            "type": "Route"
+        },
+        {
+            "from": "Ostozhenka 70",
+            "id": 1732222142,
+            "to": "Manezh",
+            "type": "Route"
+        },
+        {
+            "id": 819430422,
+            "name": "19k",
+            "type": "Bus"
+        },
+        {
+            "from": "Mokhovaya ul 80",
+            "id": 1355593539,
+            "to": "Mezhdunarodnoye sh 20",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 20",
+            "id": 1583266593,
+            "to": "Ostozhenka 90",
+            "type": "Route"
+        },
+        {
+            "id": 341956560,
+            "name": "Leningradskoye sh 50",
+            "type": "Stop"
+        },
+        {
+            "from": "Tverskaya ul 50",
+            "id": 2068492255,
+            "to": "Mokhovaya ul 20",
+            "type": "Route"
+        },
+        {
+            "id": 1273991077,
+            "name": "Kiyevskoye sh 10",
+            "type": "Stop"
+        },
+        {
+            "from": "Tverskaya ul 30",
+            "id": 1217157226,
+            "to": "Leningradskoye sh 40",
+            "type": "Route"
+        },
+        {
+            "id": 590459346,
+            "name": "43k",
+            "type": "Bus"
+        },
+        {
+            "from": "Komsomolskiy pr 100",
+            "id": 1429827679,
+            "to": "Manezh",
+            "type": "Route"
+        },
+        {
+            "id": 1491490499,
+            "name": "Belorusskiy vokzal",
+            "type": "Stop"
+        },
+        {
+            "from": "Ostozhenka 50",
+            "id": 1919890905,
+            "to": "Kiyevskoye sh 90",
+            "type": "Route"
+        },
+        {
+            "id": 802437680,
+            "name": "Kiyevskoye sh 20",
+            "type": "Stop"
+        },
+        {
+            "from": "Pr Vernadskogo 60",
+            "id": 651169569,
+            "to": "Komsomolskiy pr 60",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 100",
+            "id": 1693772082,
+            "to": "Tverskaya ul 50",
+            "type": "Route"
+        },
+        {
+            "id": 291021923,
+            "name": "68k",
+            "type": "Bus"
+        },
+        {
+            "id": 524832460,
+            "name": "Leningradskiy pr 30",
+            "type": "Stop"
+        },
+        {
+            "from": "Kiyevskoye sh 10",
+            "id": 87416303,
+            "to": "Ostozhenka 30",
+            "type": "Route"
+        },
+        {
+            "from": "Ostozhenka 100",
+            "id": 881531046,
+            "to": "Leningradskiy pr 50",
+            "type": "Route"
+        },
+        {
+            "id": 106969856,
+            "name": "41",
+            "type": "Bus"
+        },
+        {
+            "id": 2050326951,
+            "name": "Ostozhenka 10",
+            "type": "Stop"
+        },
+        {
+            "id": 285559190,
+            "name": "Kiyevskoye sh 100",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskoye sh 90",
+            "id": 439829207,
+            "to": "Tverskaya ul 40",
+            "type": "Route"
+        },
+        {
+            "id": 1500331975,
+            "name": "100k",
+            "type": "Bus"
+        },
+        {
+            "id": 39536936,
+            "name": "60",
+            "type": "Bus"
+        },
+        {
+            "id": 1879866889,
+            "name": "Pr Vernadskogo 10",
+            "type": "Stop"
+        },
+        {
+            "from": "Pr Vernadskogo 100",
+            "id": 92708127,
+            "to": "Komsomolskiy pr 70",
+            "type": "Route"
+        },
+        {
+            "id": 1081123661,
+            "name": "65k",
+            "type": "Bus"
+        },
+        {
+            "from": "Luzhniki",
+            "id": 1246578769,
+            "to": "Kiyevskoye sh 70",
+            "type": "Route"
+        },
+        {
+            "id": 1888137148,
+            "name": "84k",
+            "type": "Bus"
+        },
+        {
+            "id": 1605701212,
+            "name": "Komsomolskiy pr 10",
+            "type": "Stop"
+        },
+        {
+            "from": "Vnukovo",
+            "id": 2030586329,
+            "to": "Pr Vernadskogo 10",
+            "type": "Route"
+        },
+        {
+            "id": 1862530785,
+            "name": "12",
+            "type": "Bus"
+        },
+        {
+            "from": "Pr Vernadskogo 50",
+            "id": 1092075187,
+            "to": "Ostozhenka 70",
+            "type": "Route"
+        },
+        {
+            "from": "Ostozhenka 30",
+            "id": 181832133,
+            "to": "Belorusskiy vokzal",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 90",
+            "id": 2069182629,
+            "to": "Leningradskiy pr 80",
+            "type": "Route"
+        },
+        {
+            "id": 231005000,
+            "name": "90k",
+            "type": "Bus"
+        },
+        {
+            "id": 1321456988,
+            "name": "Mezhdunarodnoye sh 100",
+            "type": "Stop"
+        },
+        {
+            "id": 1952512570,
+            "name": "62",
+            "type": "Bus"
+        },
+        {
+            "from": "Mokhovaya ul 30",
+            "id": 2031174840,
+            "to": "Komsomolskiy pr 100",
+            "type": "Route"
+        },
+        {
+            "from": "Khimki",
+            "id": 587491449,
+            "to": "Leningradskiy pr 50",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 60",
+            "id": 335032881,
+            "to": "Ostozhenka 80",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 70",
+            "id": 707243465,
+            "to": "Troparyovo",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 30",
+            "id": 947490979,
+            "to": "Tverskaya ul 70",
+            "type": "Route"
+        },
+        {
+            "id": 1184095094,
+            "name": "64k",
+            "type": "Bus"
+        },
+        {
+            "from": "Tverskaya ul 80",
+            "id": 1968457456,
+            "to": "Leningradskiy pr 60",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 10",
+            "id": 161043286,
+            "to": "Ostozhenka 80",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 40",
+            "id": 1442399506,
+            "to": "Kremlin",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 80",
+            "id": 134455258,
+            "to": "Leningradskoye sh 100",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 60",
+            "id": 247768132,
+            "to": "Pr Vernadskogo 30",
+            "type": "Route"
+        },
+        {
+            "id": 2117221344,
+            "name": "1sayfjRVzvkgsqDco",
+            "type": "Bus"
+        },
+        {
+            "from": "Pr Vernadskogo 90",
+            "id": 339137699,
+            "to": "Pr Vernadskogo 40",
+            "type": "Route"
+        },
+        {
+            "id": 54397640,
+            "name": "78k",
+            "type": "Bus"
+        },
+        {
+            "from": "Manezh",
+            "id": 510690410,
+            "to": "Pr Vernadskogo 60",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskiy pr 10",
+            "id": 62560639,
+            "to": "Pr Vernadskogo 60",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskiy pr 50",
+            "id": 1908565471,
+            "to": "Tverskaya ul 80",
+            "type": "Route"
+        },
+        {
+            "id": 1028047723,
+            "name": "20",
+            "type": "Bus"
+        },
+        {
+            "id": 1858698038,
+            "name": "XhigObwaGQAR5pwd",
+            "type": "Bus"
+        },
+        {
+            "from": "Leningradskoye sh 100",
+            "id": 223231983,
+            "to": "Pr Vernadskogo 90",
+            "type": "Route"
+        },
+        {
+            "id": 1391108907,
+            "name": "4",
+            "type": "Bus"
+        },
+        {
+            "id": 1221092998,
+            "name": "99k",
+            "type": "Bus"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 60",
+            "id": 1859967130,
+            "to": "Leningradskoye sh 70",
+            "type": "Route"
+        },
+        {
+            "id": 1945272220,
+            "name": "dGkut9AZ15Y",
+            "type": "Stop"
+        },
+        {
+            "id": 2095250019,
+            "name": "Tverskaya ul 50",
+            "type": "Stop"
+        },
+        {
+            "from": "Belorusskiy vokzal",
+            "id": 2043999979,
+            "to": "Pr Vernadskogo 50",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 70",
+            "id": 1628005533,
+            "to": "Mezhdunarodnoye sh 10",
+            "type": "Route"
+        },
+        {
+            "from": "Sokol",
+            "id": 1529886021,
+            "to": "Tverskaya ul 100",
+            "type": "Route"
+        },
+        {
+            "id": 1183335362,
+            "name": "87k",
+            "type": "Bus"
+        },
+        {
+            "id": 1148160947,
+            "name": "57k",
+            "type": "Bus"
+        },
+        {
+            "from": "Ostozhenka 90",
+            "id": 1952819726,
+            "to": "Kiyevskoye sh 10",
+            "type": "Route"
+        },
+        {
+            "id": 54397640,
+            "name": "78k",
+            "type": "Bus"
+        },
+        {
+            "id": 1301480814,
+            "name": "9k",
+            "type": "Bus"
+        },
+        {
+            "id": 625048715,
+            "name": "85k",
+            "type": "Bus"
+        },
+        {
+            "from": "Komsomolskiy pr 10",
+            "id": 1923787123,
+            "to": "Leningradskiy pr 10",
+            "type": "Route"
+        },
+        {
+            "id": 463018877,
+            "name": "twXJnOM xRWmUPyG",
+            "type": "Stop"
+        },
+        {
+            "id": 1057638203,
+            "name": "wYIw Re9xb0noUKJj95EVS5",
+            "type": "Bus"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 70",
+            "id": 1172290271,
+            "to": "Mokhovaya ul 70",
+            "type": "Route"
+        },
+        {
+            "id": 1071355180,
+            "name": "Pr Vernadskogo 20",
+            "type": "Stop"
+        },
+        {
+            "from": "Komsomolskiy pr 50",
+            "id": 669228348,
+            "to": "Ostozhenka 20",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 60",
+            "id": 29031172,
+            "to": "Leningradskoye sh 10",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 70",
+            "id": 587424192,
+            "to": "Mokhovaya ul 90",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 80",
+            "id": 484466453,
+            "to": "Komsomolskiy pr 70",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 50",
+            "id": 532579776,
+            "to": "Leningradskiy pr 40",
+            "type": "Route"
+        },
+        {
+            "id": 1215181049,
+            "name": "Tverskaya ul 40",
+            "type": "Stop"
+        },
+        {
+            "from": "Komsomolskiy pr 50",
+            "id": 1886985347,
+            "to": "Ostozhenka 60",
+            "type": "Route"
+        },
+        {
+            "id": 1320378198,
+            "name": "32",
+            "type": "Bus"
+        },
+        {
+            "from": "Leningradskiy pr 20",
+            "id": 1908301590,
+            "to": "Ostozhenka 10",
+            "type": "Route"
+        },
+        {
+            "id": 331121298,
+            "name": "Mokhovaya ul 20",
+            "type": "Stop"
+        },
+        {
+            "id": 1748756235,
+            "name": "Komsomolskiy pr 100",
+            "type": "Stop"
+        },
+        {
+            "from": "Kiyevskoye sh 70",
+            "id": 1224988054,
+            "to": "Manezh",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 40",
+            "id": 677718707,
+            "to": "Troparyovo",
+            "type": "Route"
+        },
+        {
+            "from": "Belorusskiy vokzal",
+            "id": 470944509,
+            "to": "Vnukovo",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 60",
+            "id": 1516474884,
+            "to": "Tverskaya ul 40",
+            "type": "Route"
+        },
+        {
+            "id": 884992097,
+            "name": "81",
+            "type": "Bus"
+        },
+        {
+            "from": "Kiyevskoye sh 70",
+            "id": 850990014,
+            "to": "Yandex",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 40",
+            "id": 1920216273,
+            "to": "Mezhdunarodnoye sh 10",
+            "type": "Route"
+        },
+        {
+            "id": 1532241955,
+            "name": "7k",
+            "type": "Bus"
+        },
+        {
+            "id": 1071355180,
+            "name": "Pr Vernadskogo 20",
+            "type": "Stop"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 60",
+            "id": 1394960544,
+            "to": "Komsomolskiy pr 70",
+            "type": "Route"
+        },
+        {
+            "id": 1028047723,
+            "name": "20",
+            "type": "Bus"
+        },
+        {
+            "id": 1396785474,
+            "name": "Ostozhenka 40",
+            "type": "Stop"
+        },
+        {
+            "from": "Mokhovaya ul 100",
+            "id": 1455103859,
+            "to": "Kiyevskoye sh 70",
+            "type": "Route"
+        },
+        {
+            "id": 978815997,
+            "name": "Mokhovaya ul 30",
+            "type": "Stop"
+        },
+        {
+            "id": 1221092998,
+            "name": "99k",
+            "type": "Bus"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 30",
+            "id": 1308286286,
+            "to": "Troparyovo",
+            "type": "Route"
+        },
+        {
+            "id": 1679261573,
+            "name": "74k",
+            "type": "Bus"
+        },
+        {
+            "from": "Leningradskiy pr 40",
+            "id": 1629572506,
+            "to": "Leningradskoye sh 60",
+            "type": "Route"
+        },
+        {
+            "id": 2085998310,
+            "name": "29k",
+            "type": "Bus"
+        },
+        {
+            "from": "Ostozhenka 80",
+            "id": 168754802,
+            "to": "Leningradskiy pr 70",
+            "type": "Route"
+        },
+        {
+            "id": 243636714,
+            "name": "39k",
+            "type": "Bus"
+        },
+        {
+            "id": 2122883674,
+            "name": "lF",
+            "type": "Bus"
+        },
+        {
+            "id": 243636714,
+            "name": "39k",
+            "type": "Bus"
+        },
+        {
+            "id": 570491200,
+            "name": "Leningradskoye sh 90",
+            "type": "Stop"
+        },
+        {
+            "id": 819430422,
+            "name": "19k",
+            "type": "Bus"
+        },
+        {
+            "id": 557108693,
+            "name": "61k",
+            "type": "Bus"
+        },
+        {
+            "id": 331121298,
+            "name": "Mokhovaya ul 20",
+            "type": "Stop"
+        },
+        {
+            "from": "Kiyevskoye sh 80",
+            "id": 847724057,
+            "to": "Leningradskoye sh 80",
+            "type": "Route"
+        },
+        {
+            "id": 2086679848,
+            "name": "73k",
+            "type": "Bus"
+        },
+        {
+            "from": "Khimki",
+            "id": 796352811,
+            "to": "Leningradskoye sh 40",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 20",
+            "id": 1472692962,
+            "to": "Ostozhenka 20",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 60",
+            "id": 483170960,
+            "to": "Luzhniki",
+            "type": "Route"
+        },
+        {
+            "id": 1278313517,
+            "name": "h76yENQ9Dz0",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskiy pr 20",
+            "id": 1517753101,
+            "to": "Sokol",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 30",
+            "id": 1039031391,
+            "to": "Ostozhenka 20",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 20",
+            "id": 220631773,
+            "to": "Ostozhenka 50",
+            "type": "Route"
+        },
+        {
+            "id": 335501637,
+            "name": "u2i",
+            "type": "Stop"
+        },
+        {
+            "from": "Tverskaya ul 40",
+            "id": 1478459814,
+            "to": "Leningradskiy pr 60",
+            "type": "Route"
+        },
+        {
+            "id": 1028047723,
+            "name": "20",
+            "type": "Bus"
+        },
+        {
+            "from": "Komsomolskiy pr 20",
+            "id": 117546750,
+            "to": "Leningradskiy pr 40",
+            "type": "Route"
+        },
+        {
+            "id": 132064624,
+            "name": "Komsomolskiy pr 50",
+            "type": "Stop"
+        },
+        {
+            "from": "Tverskaya ul 80",
+            "id": 447331558,
+            "to": "Leningradskoye sh 40",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 60",
+            "id": 1742918735,
+            "to": "Kiyevskoye sh 30",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 60",
+            "id": 2108676344,
+            "to": "Sheremetyevo",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 70",
+            "id": 642211950,
+            "to": "Kiyevskoye sh 80",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 30",
+            "id": 723406951,
+            "to": "Leningradskoye sh 40",
+            "type": "Route"
+        },
+        {
+            "id": 548886,
+            "name": "91",
+            "type": "Bus"
+        },
+        {
+            "id": 1766990604,
+            "name": "Leningradskiy pr 10",
+            "type": "Stop"
+        },
+        {
+            "id": 1500331975,
+            "name": "100k",
+            "type": "Bus"
+        },
+        {
+            "id": 214763116,
+            "name": "27k",
+            "type": "Bus"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 20",
+            "id": 186505327,
+            "to": "Kiyevskoye sh 80",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 10",
+            "id": 1826026596,
+            "to": "Tverskaya ul 100",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 30",
+            "id": 1837842048,
+            "to": "Leningradskoye sh 50",
+            "type": "Route"
+        },
+        {
+            "id": 1222823833,
+            "name": "55k",
+            "type": "Bus"
+        },
+        {
+            "from": "Pr Vernadskogo 80",
+            "id": 1522054261,
+            "to": "Mezhdunarodnoye sh 90",
+            "type": "Route"
+        },
+        {
+            "id": 889685809,
+            "name": "J4MgIuGg2bnsxJ78K",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskiy pr 70",
+            "id": 1553836250,
+            "to": "Khimki",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 80",
+            "id": 900302727,
+            "to": "Leningradskoye sh 100",
+            "type": "Route"
+        },
+        {
+            "id": 328219103,
+            "name": "DMQPegPK9dnNfCLqf32cI5gJi",
+            "type": "Bus"
+        },
+        {
+            "from": "Komsomolskiy pr 10",
+            "id": 1538872156,
+            "to": "Leningradskiy pr 40",
+            "type": "Route"
+        },
+        {
+            "id": 1695724973,
+            "name": "Pr Vernadskogo 90",
+            "type": "Stop"
+        },
+        {
+            "from": "Tverskaya ul 30",
+            "id": 1670800962,
+            "to": "Pr Vernadskogo 20",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 80",
+            "id": 1237775266,
+            "to": "Tverskaya ul 60",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 10",
+            "id": 1878424184,
+            "to": "Ostozhenka 20",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 20",
+            "id": 1849188174,
+            "to": "Leningradskoye sh 80",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 90",
+            "id": 1807593798,
+            "to": "Kiyevskoye sh 80",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 90",
+            "id": 722432766,
+            "to": "Komsomolskiy pr 20",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 20",
+            "id": 669407984,
+            "to": "Tverskaya ul 80",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 40",
+            "id": 1613995387,
+            "to": "Kiyevskoye sh 60",
+            "type": "Route"
+        },
+        {
+            "id": 557108693,
+            "name": "61k",
+            "type": "Bus"
+        },
+        {
+            "id": 1529735027,
+            "name": "50",
+            "type": "Bus"
+        },
+        {
+            "id": 995718152,
+            "name": "tNDXfI Sm3X5hZSlCXry",
+            "type": "Bus"
+        },
+        {
+            "from": "Komsomolskiy pr 60",
+            "id": 711125431,
+            "to": "Ostozhenka 30",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 80",
+            "id": 2031874307,
+            "to": "Komsomolskiy pr 70",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 60",
+            "id": 1593512972,
+            "to": "Ostozhenka 10",
+            "type": "Route"
+        },
+        {
+            "from": "Troparyovo",
+            "id": 222363249,
+            "to": "Vnukovo",
+            "type": "Route"
+        },
+        {
+            "id": 900561951,
+            "name": "7DCVOh19x",
+            "type": "Stop"
+        },
+        {
+            "from": "Tverskaya ul 100",
+            "id": 1270847989,
+            "to": "Tverskaya ul 20",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 50",
+            "id": 1832188393,
+            "to": "Kiyevskoye sh 100",
+            "type": "Route"
+        },
+        {
+            "id": 106969856,
+            "name": "41",
+            "type": "Bus"
+        },
+        {
+            "from": "Vnukovo",
+            "id": 2004075791,
+            "to": "Leningradskiy pr 40",
+            "type": "Route"
+        },
+        {
+            "id": 2102040328,
+            "name": "67",
+            "type": "Bus"
+        },
+        {
+            "id": 1695724973,
+            "name": "Pr Vernadskogo 90",
+            "type": "Stop"
+        },
+        {
+            "from": "Komsomolskiy pr 50",
+            "id": 33562730,
+            "to": "Tverskaya ul 80",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 20",
+            "id": 1180843953,
+            "to": "Leningradskoye sh 60",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 90",
+            "id": 1480864644,
+            "to": "Mokhovaya ul 70",
+            "type": "Route"
+        },
+        {
+            "id": 1679261573,
+            "name": "74k",
+            "type": "Bus"
+        },
+        {
+            "from": "Leningradskiy pr 40",
+            "id": 1011616695,
+            "to": "Sheremetyevo",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 30",
+            "id": 1197295348,
+            "to": "Pr Vernadskogo 40",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 50",
+            "id": 434082681,
+            "to": "Mokhovaya ul 100",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 70",
+            "id": 1987500663,
+            "to": "Mokhovaya ul 60",
+            "type": "Route"
+        },
+        {
+            "id": 1901744419,
+            "name": "Leningradskoye sh 60",
+            "type": "Stop"
+        },
+        {
+            "id": 95205841,
+            "name": "58",
+            "type": "Bus"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 10",
+            "id": 335846665,
+            "to": "Komsomolskiy pr 100",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 30",
+            "id": 1985940448,
+            "to": "Pr Vernadskogo 50",
+            "type": "Route"
+        },
+        {
+            "id": 1438491283,
+            "name": "Yandex",
+            "type": "Stop"
+        },
+        {
+            "id": 1766990604,
+            "name": "Leningradskiy pr 10",
+            "type": "Stop"
+        },
+        {
+            "from": "Mokhovaya ul 100",
+            "id": 1546407652,
+            "to": "Mezhdunarodnoye sh 30",
+            "type": "Route"
+        },
+        {
+            "id": 20361745,
+            "name": "Fp3",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskiy pr 70",
+            "id": 451242450,
+            "to": "Kiyevskoye sh 90",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 70",
+            "id": 1707623395,
+            "to": "Pr Vernadskogo 80",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskiy pr 100",
+            "id": 2115725309,
+            "to": "Mezhdunarodnoye sh 10",
+            "type": "Route"
+        },
+        {
+            "id": 1464743061,
+            "name": "Mokhovaya ul 90",
+            "type": "Stop"
+        },
+        {
+            "from": "Tverskaya ul 30",
+            "id": 1419401223,
+            "to": "Pr Vernadskogo 50",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 80",
+            "id": 2049509115,
+            "to": "Komsomolskiy pr 10",
+            "type": "Route"
+        },
+        {
+            "id": 1882423715,
+            "name": "Kremlin",
+            "type": "Stop"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 100",
+            "id": 2145528349,
+            "to": "Tverskaya ul 70",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 50",
+            "id": 1088585216,
+            "to": "Leningradskiy pr 10",
+            "type": "Route"
+        },
+        {
+            "from": "Ostozhenka 80",
+            "id": 645552844,
+            "to": "Mezhdunarodnoye sh 80",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 50",
+            "id": 136345038,
+            "to": "Kremlin",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 60",
+            "id": 200613354,
+            "to": "Luzhniki",
+            "type": "Route"
+        },
+        {
+            "id": 1695724973,
+            "name": "Pr Vernadskogo 90",
+            "type": "Stop"
+        },
+        {
+            "from": "Kiyevskoye sh 10",
+            "id": 640671042,
+            "to": "Ostozhenka 60",
+            "type": "Route"
+        },
+        {
+            "id": 1462553819,
+            "name": "MRW6b IainNoiJFo5aEYM9O",
+            "type": "Stop"
+        },
+        {
+            "from": "Ostozhenka 30",
+            "id": 730035118,
+            "to": "Ostozhenka 80",
+            "type": "Route"
+        },
+        {
+            "id": 1695724973,
+            "name": "Pr Vernadskogo 90",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskiy pr 60",
+            "id": 562618897,
+            "to": "Mokhovaya ul 30",
+            "type": "Route"
+        },
+        {
+            "id": 1994418887,
+            "name": "49",
+            "type": "Bus"
+        },
+        {
+            "from": "Mokhovaya ul 70",
+            "id": 634588812,
+            "to": "Mokhovaya ul 100",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 30",
+            "id": 1707166026,
+            "to": "Tverskaya ul 80",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 10",
+            "id": 441322862,
+            "to": "Mokhovaya ul 60",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskiy pr 90",
+            "id": 1508032752,
+            "to": "Troparyovo",
+            "type": "Route"
+        },
+        {
+            "from": "Luzhniki",
+            "id": 272548083,
+            "to": "Leningradskiy pr 80",
+            "type": "Route"
+        },
+        {
+            "from": "Sokol",
+            "id": 506835991,
+            "to": "Ostozhenka 20",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 30",
+            "id": 141538956,
+            "to": "Pr Vernadskogo 60",
+            "type": "Route"
+        },
+        {
+            "from": "Khimki",
+            "id": 2052394587,
+            "to": "Leningradskoye sh 20",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskiy pr 30",
+            "id": 1598565171,
+            "to": "Mokhovaya ul 80",
+            "type": "Route"
+        },
+        {
+            "id": 2086679848,
+            "name": "73k",
+            "type": "Bus"
+        },
+        {
+            "id": 942518202,
+            "name": "F kSE2 a5Ywibrw",
+            "type": "Stop"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 70",
+            "id": 894489750,
+            "to": "Tverskaya ul 10",
+            "type": "Route"
+        },
+        {
+            "id": 361149198,
+            "name": "ndlwesbc7y",
+            "type": "Bus"
+        },
+        {
+            "id": 312162747,
+            "name": "Mezhdunarodnoye sh 40",
+            "type": "Stop"
+        },
+        {
+            "from": "Pr Vernadskogo 100",
+            "id": 628932205,
+            "to": "Pr Vernadskogo 20",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 50",
+            "id": 1976474729,
+            "to": "Leningradskoye sh 50",
+            "type": "Route"
+        },
+        {
+            "id": 291021923,
+            "name": "68k",
+            "type": "Bus"
+        },
+        {
+            "from": "Leningradskoye sh 50",
+            "id": 206011669,
+            "to": "Tverskaya ul 30",
+            "type": "Route"
+        },
+        {
+            "id": 1320378198,
+            "name": "32",
+            "type": "Bus"
+        },
+        {
+            "from": "Ostozhenka 30",
+            "id": 876284213,
+            "to": "Mokhovaya ul 50",
+            "type": "Route"
+        },
+        {
+            "id": 1791067641,
+            "name": "Mokhovaya ul 40",
+            "type": "Stop"
+        },
+        {
+            "id": 306795514,
+            "name": "Leningradskiy pr 70",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskoye sh 100",
+            "id": 1469151298,
+            "to": "Mezhdunarodnoye sh 70",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 20",
+            "id": 249294801,
+            "to": "Mezhdunarodnoye sh 100",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 100",
+            "id": 159448217,
+            "to": "Kremlin",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 20",
+            "id": 527331814,
+            "to": "Komsomolskiy pr 30",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 70",
+            "id": 48051212,
+            "to": "Mokhovaya ul 90",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 40",
+            "id": 789791172,
+            "to": "Mezhdunarodnoye sh 50",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 70",
+            "id": 2007347305,
+            "to": "Leningradskoye sh 30",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 60",
+            "id": 1757351094,
+            "to": "Komsomolskiy pr 100",
+            "type": "Route"
+        },
+        {
+            "id": 1396785474,
+            "name": "Ostozhenka 40",
+            "type": "Stop"
+        },
+        {
+            "id": 1496236952,
+            "name": "0hA",
+            "type": "Bus"
+        },
+        {
+            "id": 765063867,
+            "name": "f",
+            "type": "Stop"
+        },
+        {
+            "from": "Pr Vernadskogo 80",
+            "id": 2028583616,
+            "to": "Kremlin",
+            "type": "Route"
+        },
+        {
+            "id": 877779756,
+            "name": "54",
+            "type": "Bus"
+        },
+        {
+            "id": 549153993,
+            "name": "37k",
+            "type": "Bus"
+        },
+        {
+            "id": 54397640,
+            "name": "78k",
+            "type": "Bus"
+        },
+        {
+            "from": "Mokhovaya ul 50",
+            "id": 390440441,
+            "to": "Mezhdunarodnoye sh 40",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 50",
+            "id": 265679047,
+            "to": "Belorusskiy vokzal",
+            "type": "Route"
+        },
+        {
+            "id": 2064455607,
+            "name": "76k",
+            "type": "Bus"
+        },
+        {
+            "from": "Tverskaya ul 50",
+            "id": 1363718714,
+            "to": "Mokhovaya ul 90",
+            "type": "Route"
+        },
+        {
+            "id": 721281380,
+            "name": "Leningradskiy pr 50",
+            "type": "Stop"
+        },
+        {
+            "id": 1034325494,
+            "name": "Mezhdunarodnoye sh 10",
+            "type": "Stop"
+        },
+        {
+            "id": 1834107789,
+            "name": "Tverskaya ul 100",
+            "type": "Stop"
+        },
+        {
+            "from": "Komsomolskiy pr 50",
+            "id": 2109769776,
+            "to": "Komsomolskiy pr 70",
+            "type": "Route"
+        },
+        {
+            "id": 1242118002,
+            "name": "Sokol",
+            "type": "Stop"
+        },
+        {
+            "id": 1679261573,
+            "name": "74k",
+            "type": "Bus"
+        },
+        {
+            "from": "Kiyevskoye sh 70",
+            "id": 936111601,
+            "to": "Leningradskiy pr 100",
+            "type": "Route"
+        },
+        {
+            "id": 1166353463,
+            "name": "mPIf7dVwF53KOVSI9R4MMg",
+            "type": "Stop"
+        },
+        {
+            "id": 1692384196,
+            "name": "Mezhdunarodnoye sh 80",
+            "type": "Stop"
+        },
+        {
+            "id": 1839841385,
+            "name": "Tverskaya ul 20",
+            "type": "Stop"
+        },
+        {
+            "id": 1603176856,
+            "name": "Leningradskoye sh 80",
+            "type": "Stop"
+        },
+        {
+            "id": 2017557436,
+            "name": "Komsomolskiy pr 90",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskoye sh 50",
+            "id": 1428136225,
+            "to": "Leningradskoye sh 50",
+            "type": "Route"
+        },
+        {
+            "id": 903337307,
+            "name": "56k",
+            "type": "Bus"
+        },
+        {
+            "id": 440933152,
+            "name": "Leningradskoye sh 20",
+            "type": "Stop"
+        },
+        {
+            "id": 1971821751,
+            "name": "Komsomolskiy pr 30",
+            "type": "Stop"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 100",
+            "id": 409199091,
+            "to": "Pr Vernadskogo 10",
+            "type": "Route"
+        },
+        {
+            "id": 699793610,
+            "name": "Sheremetyevo",
+            "type": "Stop"
+        },
+        {
+            "id": 291021923,
+            "name": "68k",
+            "type": "Bus"
+        },
+        {
+            "from": "Yandex",
+            "id": 323931917,
+            "to": "Komsomolskiy pr 50",
+            "type": "Route"
+        },
+        {
+            "from": "Belorusskiy vokzal",
+            "id": 2116316696,
+            "to": "Leningradskiy pr 70",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 10",
+            "id": 2000214623,
+            "to": "Mokhovaya ul 70",
+            "type": "Route"
+        },
+        {
+            "from": "Sheremetyevo",
+            "id": 411345156,
+            "to": "Komsomolskiy pr 90",
+            "type": "Route"
+        },
+        {
+            "id": 1847557780,
+            "name": "Mezhdunarodnoye sh 30",
+            "type": "Stop"
+        },
+        {
+            "from": "Ostozhenka 70",
+            "id": 752353680,
+            "to": "Kremlin",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 10",
+            "id": 1389705516,
+            "to": "Komsomolskiy pr 70",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 30",
+            "id": 1105880470,
+            "to": "Komsomolskiy pr 80",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 30",
+            "id": 1493114441,
+            "to": "Belorusskiy vokzal",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 40",
+            "id": 1209721409,
+            "to": "Mokhovaya ul 100",
+            "type": "Route"
+        },
+        {
+            "id": 833334897,
+            "name": "Mezhdunarodnoye sh 90",
+            "type": "Stop"
+        },
+        {
+            "from": "Tverskaya ul 70",
+            "id": 1596046930,
+            "to": "Kiyevskoye sh 40",
+            "type": "Route"
+        },
+        {
+            "from": "Vnukovo",
+            "id": 1886066110,
+            "to": "Pr Vernadskogo 50",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 100",
+            "id": 1438441150,
+            "to": "Kiyevskoye sh 80",
+            "type": "Route"
+        },
+        {
+            "id": 877779756,
+            "name": "54",
+            "type": "Bus"
+        },
+        {
+            "from": "Pr Vernadskogo 100",
+            "id": 436491761,
+            "to": "Komsomolskiy pr 40",
+            "type": "Route"
+        },
+        {
+            "id": 589555403,
+            "name": "47k",
+            "type": "Bus"
+        },
+        {
+            "from": "Leningradskiy pr 100",
+            "id": 1823262951,
+            "to": "Leningradskoye sh 100",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 100",
+            "id": 1258053733,
+            "to": "Mokhovaya ul 20",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 30",
+            "id": 295657195,
+            "to": "Leningradskiy pr 50",
+            "type": "Route"
+        },
+        {
+            "id": 132064624,
+            "name": "Komsomolskiy pr 50",
+            "type": "Stop"
+        },
+        {
+            "id": 1459482213,
+            "name": "42",
+            "type": "Bus"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 70",
+            "id": 855962237,
+            "to": "Khimki",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 80",
+            "id": 1221384617,
+            "to": "Tverskaya ul 50",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 70",
+            "id": 1987626820,
+            "to": "Belorusskiy vokzal",
+            "type": "Route"
+        },
+        {
+            "id": 2104567867,
+            "name": "28",
+            "type": "Bus"
+        },
+        {
+            "from": "Leningradskiy pr 20",
+            "id": 1174899328,
+            "to": "Ostozhenka 20",
+            "type": "Route"
+        },
+        {
+            "id": 1249144660,
+            "name": "EzyGwmHDxKahUE9wlYkbpMO",
+            "type": "Stop"
+        },
+        {
+            "from": "Vnukovo",
+            "id": 1231841078,
+            "to": "Ostozhenka 90",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 100",
+            "id": 1683922973,
+            "to": "Leningradskoye sh 60",
+            "type": "Route"
+        },
+        {
+            "id": 1901744419,
+            "name": "Leningradskoye sh 60",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskiy pr 60",
+            "id": 627970370,
+            "to": "Mezhdunarodnoye sh 90",
+            "type": "Route"
+        },
+        {
+            "id": 1960392737,
+            "name": "13",
+            "type": "Bus"
+        },
+        {
+            "id": 1472826063,
+            "name": "98",
+            "type": "Bus"
+        },
+        {
+            "id": 1797256328,
+            "name": "Pr Vernadskogo 100",
+            "type": "Stop"
+        },
+        {
+            "from": "Tverskaya ul 60",
+            "id": 452517815,
+            "to": "Leningradskiy pr 60",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 30",
+            "id": 1504311232,
+            "to": "Tverskaya ul 60",
+            "type": "Route"
+        },
+        {
+            "from": "Khimki",
+            "id": 464841003,
+            "to": "Ostozhenka 70",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 70",
+            "id": 1328563016,
+            "to": "Leningradskiy pr 70",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 80",
+            "id": 614862338,
+            "to": "Kiyevskoye sh 30",
+            "type": "Route"
+        },
+        {
+            "id": 260277259,
+            "name": "Tverskaya ul 90",
+            "type": "Stop"
+        },
+        {
+            "from": "Mokhovaya ul 100",
+            "id": 1859411760,
+            "to": "Leningradskoye sh 70",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskiy pr 20",
+            "id": 1974729716,
+            "to": "Tverskaya ul 50",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 20",
+            "id": 1320138317,
+            "to": "Kiyevskoye sh 50",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 60",
+            "id": 1607000115,
+            "to": "Pr Vernadskogo 20",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 50",
+            "id": 709688600,
+            "to": "Kiyevskoye sh 60",
+            "type": "Route"
+        },
+        {
+            "id": 640386051,
+            "name": "14",
+            "type": "Bus"
+        },
+        {
+            "from": "Komsomolskiy pr 10",
+            "id": 1535409304,
+            "to": "Pr Vernadskogo 70",
+            "type": "Route"
+        },
+        {
+            "id": 1495910205,
+            "name": "Mezhdunarodnoye sh 70",
+            "type": "Stop"
+        },
+        {
+            "from": "Tverskaya ul 100",
+            "id": 1438441150,
+            "to": "Kiyevskoye sh 80",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 70",
+            "id": 309662858,
+            "to": "Sokol",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 20",
+            "id": 1089029688,
+            "to": "Leningradskoye sh 30",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 100",
+            "id": 770141494,
+            "to": "Tverskaya ul 80",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 20",
+            "id": 1995045570,
+            "to": "Leningradskiy pr 30",
+            "type": "Route"
+        },
+        {
+            "id": 1432394340,
+            "name": "38k",
+            "type": "Bus"
+        },
+        {
+            "from": "Mokhovaya ul 50",
+            "id": 1569843456,
+            "to": "Mezhdunarodnoye sh 70",
+            "type": "Route"
+        },
+        {
+            "id": 1770268632,
+            "name": "Ostozhenka 90",
+            "type": "Stop"
+        },
+        {
+            "from": "Ostozhenka 10",
+            "id": 240170207,
+            "to": "Pr Vernadskogo 20",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 50",
+            "id": 856458027,
+            "to": "Tverskaya ul 40",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 80",
+            "id": 868322217,
+            "to": "Ostozhenka 50",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 60",
+            "id": 1149949602,
+            "to": "Ostozhenka 90",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 80",
+            "id": 1259470803,
+            "to": "Mokhovaya ul 20",
+            "type": "Route"
+        },
+        {
+            "id": 2077587727,
+            "name": "Pr Vernadskogo 40",
+            "type": "Stop"
+        },
+        {
+            "from": "Kiyevskoye sh 90",
+            "id": 1208305765,
+            "to": "Mokhovaya ul 100",
+            "type": "Route"
+        },
+        {
+            "from": "Sheremetyevo",
+            "id": 1931867777,
+            "to": "Leningradskiy pr 100",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 40",
+            "id": 1048821539,
+            "to": "Mokhovaya ul 80",
+            "type": "Route"
+        },
+        {
+            "from": "Ostozhenka 80",
+            "id": 1034015685,
+            "to": "Leningradskiy pr 40",
+            "type": "Route"
+        },
+        {
+            "id": 54397640,
+            "name": "78k",
+            "type": "Bus"
+        },
+        {
+            "from": "Tverskaya ul 10",
+            "id": 96858075,
+            "to": "Mezhdunarodnoye sh 20",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 10",
+            "id": 1412095146,
+            "to": "Kiyevskoye sh 80",
+            "type": "Route"
+        },
+        {
+            "from": "Ostozhenka 60",
+            "id": 542626469,
+            "to": "Ostozhenka 80",
+            "type": "Route"
+        },
+        {
+            "id": 1460982888,
+            "name": "Pr Vernadskogo 80",
+            "type": "Stop"
+        },
+        {
+            "from": "Tverskaya ul 40",
+            "id": 726965099,
+            "to": "Komsomolskiy pr 30",
+            "type": "Route"
+        },
+        {
+            "id": 1396785474,
+            "name": "Ostozhenka 40",
+            "type": "Stop"
+        },
+        {
+            "id": 1878414831,
+            "name": "2lvg8YfgkaCJPHLVzWlv",
+            "type": "Stop"
+        },
+        {
+            "from": "Tverskaya ul 10",
+            "id": 1715794281,
+            "to": "Ostozhenka 70",
+            "type": "Route"
+        },
+        {
+            "from": "Yandex",
+            "id": 1631148964,
+            "to": "Leningradskiy pr 50",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 30",
+            "id": 526522666,
+            "to": "Mokhovaya ul 40",
+            "type": "Route"
+        },
+        {
+            "from": "Ostozhenka 20",
+            "id": 1741512299,
+            "to": "Manezh",
+            "type": "Route"
+        },
+        {
+            "id": 1028047723,
+            "name": "20",
+            "type": "Bus"
+        },
+        {
+            "id": 1603176856,
+            "name": "Leningradskoye sh 80",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskiy pr 60",
+            "id": 1630104965,
+            "to": "Kiyevskoye sh 80",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 40",
+            "id": 349012442,
+            "to": "Yandex",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 100",
+            "id": 492804644,
+            "to": "Tverskaya ul 80",
+            "type": "Route"
+        },
+        {
+            "id": 1879866889,
+            "name": "Pr Vernadskogo 10",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskiy pr 30",
+            "id": 1964072666,
+            "to": "Ostozhenka 20",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 40",
+            "id": 1323126858,
+            "to": "Komsomolskiy pr 20",
+            "type": "Route"
+        },
+        {
+            "id": 1603176856,
+            "name": "Leningradskoye sh 80",
+            "type": "Stop"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 80",
+            "id": 1610877290,
+            "to": "Kiyevskoye sh 30",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 70",
+            "id": 596323985,
+            "to": "Mokhovaya ul 30",
+            "type": "Route"
+        },
+        {
+            "id": 589555403,
+            "name": "47k",
+            "type": "Bus"
+        },
+        {
+            "from": "Leningradskoye sh 20",
+            "id": 2070220577,
+            "to": "Komsomolskiy pr 20",
+            "type": "Route"
+        },
+        {
+            "id": 1494048957,
+            "name": "cWhYNb7z",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskoye sh 100",
+            "id": 492804644,
+            "to": "Tverskaya ul 80",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 90",
+            "id": 1266357999,
+            "to": "Mezhdunarodnoye sh 90",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 60",
+            "id": 22590122,
+            "to": "Leningradskoye sh 20",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 70",
+            "id": 2085323124,
+            "to": "Komsomolskiy pr 80",
+            "type": "Route"
+        },
+        {
+            "id": 1260274581,
+            "name": "40k",
+            "type": "Bus"
+        },
+        {
+            "from": "Sheremetyevo",
+            "id": 522793698,
+            "to": "Leningradskoye sh 70",
+            "type": "Route"
+        },
+        {
+            "from": "Ostozhenka 40",
+            "id": 361837950,
+            "to": "Ostozhenka 80",
+            "type": "Route"
+        },
+        {
+            "id": 1770268632,
+            "name": "Ostozhenka 90",
+            "type": "Stop"
+        },
+        {
+            "id": 1074291017,
+            "name": "EIY1mq6wy2Zu63I2eb",
+            "type": "Bus"
+        },
+        {
+            "id": 978815997,
+            "name": "Mokhovaya ul 30",
+            "type": "Stop"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 30",
+            "id": 1374183314,
+            "to": "Ostozhenka 90",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 80",
+            "id": 868322217,
+            "to": "Ostozhenka 50",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 70",
+            "id": 761004543,
+            "to": "Pr Vernadskogo 100",
+            "type": "Route"
+        },
+        {
+            "from": "Belorusskiy vokzal",
+            "id": 321914567,
+            "to": "Mezhdunarodnoye sh 10",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 100",
+            "id": 904484759,
+            "to": "Pr Vernadskogo 100",
+            "type": "Route"
+        },
+        {
+            "id": 1500331975,
+            "name": "100k",
+            "type": "Bus"
+        },
+        {
+            "id": 1460982888,
+            "name": "Pr Vernadskogo 80",
+            "type": "Stop"
+        },
+        {
+            "id": 2059621403,
+            "name": "Kiyevskoye sh 30",
+            "type": "Stop"
+        },
+        {
+            "id": 640386051,
+            "name": "14",
+            "type": "Bus"
+        },
+        {
+            "id": 1952512570,
+            "name": "62",
+            "type": "Bus"
+        },
+        {
+            "id": 652318140,
+            "name": "92k",
+            "type": "Bus"
+        },
+        {
+            "id": 1321456988,
+            "name": "Mezhdunarodnoye sh 100",
+            "type": "Stop"
+        },
+        {
+            "id": 2064455607,
+            "name": "76k",
+            "type": "Bus"
+        },
+        {
+            "from": "Sheremetyevo",
+            "id": 2113585676,
+            "to": "Troparyovo",
+            "type": "Route"
+        },
+        {
+            "from": "Ostozhenka 20",
+            "id": 1778447876,
+            "to": "Mokhovaya ul 40",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 30",
+            "id": 1134899832,
+            "to": "Tverskaya ul 10",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 10",
+            "id": 607005622,
+            "to": "Kiyevskoye sh 20",
+            "type": "Route"
+        },
+        {
+            "id": 1491490499,
+            "name": "Belorusskiy vokzal",
+            "type": "Stop"
+        },
+        {
+            "from": "Komsomolskiy pr 40",
+            "id": 530501261,
+            "to": "Mezhdunarodnoye sh 50",
+            "type": "Route"
+        },
+        {
+            "id": 1000797031,
+            "name": "35",
+            "type": "Bus"
+        },
+        {
+            "id": 1242118002,
+            "name": "Sokol",
+            "type": "Stop"
+        },
+        {
+            "id": 341956560,
+            "name": "Leningradskoye sh 50",
+            "type": "Stop"
+        },
+        {
+            "id": 1459482213,
+            "name": "42",
+            "type": "Bus"
+        },
+        {
+            "from": "Mokhovaya ul 40",
+            "id": 485100209,
+            "to": "Pr Vernadskogo 30",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 60",
+            "id": 483498483,
+            "to": "Tverskaya ul 100",
+            "type": "Route"
+        },
+        {
+            "id": 227053825,
+            "name": "M0lNzrm6FJ",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskiy pr 80",
+            "id": 57950281,
+            "to": "Leningradskoye sh 60",
+            "type": "Route"
+        },
+        {
+            "id": 1680438344,
+            "name": "Leningradskiy pr 90",
+            "type": "Stop"
+        },
+        {
+            "id": 101285333,
+            "name": "qGlRhSsaCUm",
+            "type": "Stop"
+        },
+        {
+            "from": "Tverskaya ul 10",
+            "id": 365329655,
+            "to": "Pr Vernadskogo 100",
+            "type": "Route"
+        },
+        {
+            "id": 2086679848,
+            "name": "73k",
+            "type": "Bus"
+        },
+        {
+            "from": "Ostozhenka 70",
+            "id": 1936209977,
+            "to": "Leningradskoye sh 10",
+            "type": "Route"
+        },
+        {
+            "id": 2102433046,
+            "name": "21k",
+            "type": "Bus"
+        },
+        {
+            "from": "Leningradskiy pr 60",
+            "id": 372905705,
+            "to": "Mezhdunarodnoye sh 60",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 50",
+            "id": 1071230749,
+            "to": "Pr Vernadskogo 70",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 60",
+            "id": 272575707,
+            "to": "Mokhovaya ul 70",
+            "type": "Route"
+        },
+        {
+            "id": 341956560,
+            "name": "Leningradskoye sh 50",
+            "type": "Stop"
+        },
+        {
+            "id": 978815997,
+            "name": "Mokhovaya ul 30",
+            "type": "Stop"
+        },
+        {
+            "id": 132416404,
+            "name": "Mokhovaya ul 10",
+            "type": "Stop"
+        },
+        {
+            "id": 948168823,
+            "name": "Mezhdunarodnoye sh 50",
+            "type": "Stop"
+        },
+        {
+            "from": "Kiyevskoye sh 30",
+            "id": 1173984878,
+            "to": "Komsomolskiy pr 90",
+            "type": "Route"
+        },
+        {
+            "id": 744679212,
+            "name": "lWtHAhJkA",
+            "type": "Stop"
+        },
+        {
+            "from": "Kremlin",
+            "id": 1886511862,
+            "to": "Leningradskoye sh 70",
+            "type": "Route"
+        },
+        {
+            "id": 1197887645,
+            "name": "18",
+            "type": "Bus"
+        },
+        {
+            "from": "Ostozhenka 60",
+            "id": 987287695,
+            "to": "Mokhovaya ul 20",
+            "type": "Route"
+        },
+        {
+            "from": "Ostozhenka 70",
+            "id": 584594163,
+            "to": "Ostozhenka 60",
+            "type": "Route"
+        },
+        {
+            "from": "Sheremetyevo",
+            "id": 117769885,
+            "to": "Pr Vernadskogo 60",
+            "type": "Route"
+        },
+        {
+            "from": "Yandex",
+            "id": 1375125155,
+            "to": "Komsomolskiy pr 60",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskiy pr 10",
+            "id": 212397783,
+            "to": "Sokol",
+            "type": "Route"
+        },
+        {
+            "id": 1242118002,
+            "name": "Sokol",
+            "type": "Stop"
+        },
+        {
+            "from": "Kiyevskoye sh 80",
+            "id": 2017091542,
+            "to": "Kiyevskoye sh 10",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 100",
+            "id": 1445323734,
+            "to": "Kiyevskoye sh 90",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 10",
+            "id": 791026214,
+            "to": "Ostozhenka 30",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 80",
+            "id": 411707626,
+            "to": "Mezhdunarodnoye sh 20",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 70",
+            "id": 1455360998,
+            "to": "Tverskaya ul 10",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 80",
+            "id": 1655356417,
+            "to": "Pr Vernadskogo 40",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 20",
+            "id": 102162803,
+            "to": "Leningradskiy pr 20",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 50",
+            "id": 453786017,
+            "to": "Komsomolskiy pr 80",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 60",
+            "id": 1092274349,
+            "to": "Ostozhenka 90",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 10",
+            "id": 470859568,
+            "to": "Pr Vernadskogo 90",
+            "type": "Route"
+        },
+        {
+            "id": 1574480338,
+            "name": "70k",
+            "type": "Bus"
+        },
+        {
+            "from": "Tverskaya ul 30",
+            "id": 997113424,
+            "to": "Komsomolskiy pr 50",
+            "type": "Route"
+        },
+        {
+            "id": 243636714,
+            "name": "39k",
+            "type": "Bus"
+        },
+        {
+            "from": "Pr Vernadskogo 30",
+            "id": 1642801276,
+            "to": "Pr Vernadskogo 30",
+            "type": "Route"
+        },
+        {
+            "from": "Ostozhenka 20",
+            "id": 1733666485,
+            "to": "Leningradskoye sh 70",
+            "type": "Route"
+        },
+        {
+            "id": 1466894379,
+            "name": "CLLF34Du2aq8Hw8wwIi",
+            "type": "Stop"
+        },
+        {
+            "id": 1387259836,
+            "name": "51k",
+            "type": "Bus"
+        },
+        {
+            "from": "Leningradskiy pr 100",
+            "id": 609573172,
+            "to": "Leningradskoye sh 90",
+            "type": "Route"
+        },
+        {
+            "id": 1960392737,
+            "name": "13",
+            "type": "Bus"
+        },
+        {
+            "from": "Mokhovaya ul 30",
+            "id": 670161997,
+            "to": "Leningradskiy pr 90",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 20",
+            "id": 1251342801,
+            "to": "Ostozhenka 100",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 30",
+            "id": 431607968,
+            "to": "Mezhdunarodnoye sh 10",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 20",
+            "id": 1853259204,
+            "to": "Komsomolskiy pr 10",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 90",
+            "id": 616615236,
+            "to": "Leningradskiy pr 40",
+            "type": "Route"
+        },
+        {
+            "from": "Manezh",
+            "id": 59735831,
+            "to": "Leningradskiy pr 10",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 100",
+            "id": 521795577,
+            "to": "Mokhovaya ul 30",
+            "type": "Route"
+        },
+        {
+            "id": 1879866889,
+            "name": "Pr Vernadskogo 10",
+            "type": "Stop"
+        },
+        {
+            "id": 2102433046,
+            "name": "21k",
+            "type": "Bus"
+        },
+        {
+            "id": 243636714,
+            "name": "39k",
+            "type": "Bus"
+        },
+        {
+            "from": "Kiyevskoye sh 40",
+            "id": 1947387346,
+            "to": "Mezhdunarodnoye sh 60",
+            "type": "Route"
+        },
+        {
+            "id": 1215181049,
+            "name": "Tverskaya ul 40",
+            "type": "Stop"
+        },
+        {
+            "from": "Pr Vernadskogo 50",
+            "id": 1972694566,
+            "to": "Vnukovo",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 30",
+            "id": 912228900,
+            "to": "Komsomolskiy pr 90",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 100",
+            "id": 1853532026,
+            "to": "Kiyevskoye sh 10",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 60",
+            "id": 860721547,
+            "to": "Kiyevskoye sh 90",
+            "type": "Route"
+        },
+        {
+            "id": 1921087375,
+            "name": "Kiyevskoye sh 40",
+            "type": "Stop"
+        },
+        {
+            "from": "Kiyevskoye sh 50",
+            "id": 2078846923,
+            "to": "Leningradskoye sh 70",
+            "type": "Route"
+        },
+        {
+            "id": 231005000,
+            "name": "90k",
+            "type": "Bus"
+        },
+        {
+            "id": 625048715,
+            "name": "85k",
+            "type": "Bus"
+        },
+        {
+            "from": "Komsomolskiy pr 10",
+            "id": 2112887636,
+            "to": "Mokhovaya ul 20",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 60",
+            "id": 1794547247,
+            "to": "Pr Vernadskogo 90",
+            "type": "Route"
+        },
+        {
+            "id": 1439084482,
+            "name": "nJ",
+            "type": "Bus"
+        },
+        {
+            "id": 1197887645,
+            "name": "18",
+            "type": "Bus"
+        },
+        {
+            "id": 833334897,
+            "name": "Mezhdunarodnoye sh 90",
+            "type": "Stop"
+        },
+        {
+            "id": 214763116,
+            "name": "27k",
+            "type": "Bus"
+        },
+        {
+            "from": "Pr Vernadskogo 60",
+            "id": 1561080924,
+            "to": "Tverskaya ul 100",
+            "type": "Route"
+        },
+        {
+            "id": 1432394340,
+            "name": "38k",
+            "type": "Bus"
+        },
+        {
+            "from": "Leningradskiy pr 40",
+            "id": 187608615,
+            "to": "Pr Vernadskogo 50",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 90",
+            "id": 2037413359,
+            "to": "Leningradskoye sh 70",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 80",
+            "id": 887995895,
+            "to": "Sheremetyevo",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 20",
+            "id": 629080831,
+            "to": "Leningradskoye sh 50",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskiy pr 20",
+            "id": 77913303,
+            "to": "Mezhdunarodnoye sh 50",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 50",
+            "id": 815843215,
+            "to": "Komsomolskiy pr 10",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 30",
+            "id": 1748629121,
+            "to": "Leningradskoye sh 70",
+            "type": "Route"
+        },
+        {
+            "id": 132416404,
+            "name": "Mokhovaya ul 10",
+            "type": "Stop"
+        },
+        {
+            "from": "Khimki",
+            "id": 533335950,
+            "to": "Leningradskiy pr 10",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskiy pr 80",
+            "id": 668615101,
+            "to": "Ostozhenka 70",
+            "type": "Route"
+        },
+        {
+            "id": 1398003484,
+            "name": "11",
+            "type": "Bus"
+        },
+        {
+            "from": "Leningradskoye sh 50",
+            "id": 1091231636,
+            "to": "Leningradskiy pr 20",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 50",
+            "id": 766390355,
+            "to": "Mokhovaya ul 100",
+            "type": "Route"
+        },
+        {
+            "id": 2059621403,
+            "name": "Kiyevskoye sh 30",
+            "type": "Stop"
+        },
+        {
+            "from": "Tverskaya ul 100",
+            "id": 1455625023,
+            "to": "Tverskaya ul 40",
+            "type": "Route"
+        },
+        {
+            "id": 331121298,
+            "name": "Mokhovaya ul 20",
+            "type": "Stop"
+        },
+        {
+            "from": "Kiyevskoye sh 80",
+            "id": 1823768249,
+            "to": "Komsomolskiy pr 70",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 60",
+            "id": 1068347204,
+            "to": "Mokhovaya ul 60",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 90",
+            "id": 2037185992,
+            "to": "Komsomolskiy pr 60",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 60",
+            "id": 177591521,
+            "to": "Pr Vernadskogo 30",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 20",
+            "id": 6840917,
+            "to": "Ostozhenka 50",
+            "type": "Route"
+        },
+        {
+            "from": "Khimki",
+            "id": 988433085,
+            "to": "Sokol",
+            "type": "Route"
+        },
+        {
+            "from": "Kiyevskoye sh 20",
+            "id": 1848388113,
+            "to": "Leningradskiy pr 60",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 90",
+            "id": 281639940,
+            "to": "Tverskaya ul 60",
+            "type": "Route"
+        },
+        {
+            "id": 1152814312,
+            "name": "3k",
+            "type": "Bus"
+        },
+        {
+            "id": 1183335362,
+            "name": "87k",
+            "type": "Bus"
+        },
+        {
+            "from": "Mokhovaya ul 90",
+            "id": 833195589,
+            "to": "Mezhdunarodnoye sh 50",
+            "type": "Route"
+        },
+        {
+            "id": 243636714,
+            "name": "39k",
+            "type": "Bus"
+        },
+        {
+            "from": "Mokhovaya ul 90",
+            "id": 693205939,
+            "to": "Ostozhenka 70",
+            "type": "Route"
+        },
+        {
+            "id": 1671271267,
+            "name": "59",
+            "type": "Bus"
+        },
+        {
+            "id": 548886,
+            "name": "91",
+            "type": "Bus"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 100",
+            "id": 1631449496,
+            "to": "Mezhdunarodnoye sh 30",
+            "type": "Route"
+        },
+        {
+            "id": 1034325494,
+            "name": "Mezhdunarodnoye sh 10",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskiy pr 90",
+            "id": 469414069,
+            "to": "Ostozhenka 20",
+            "type": "Route"
+        },
+        {
+            "id": 548886,
+            "name": "91",
+            "type": "Bus"
+        },
+        {
+            "id": 1386408138,
+            "name": "Leningradskiy pr 40",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskoye sh 20",
+            "id": 2081465429,
+            "to": "Mokhovaya ul 100",
+            "type": "Route"
+        },
+        {
+            "id": 1374238609,
+            "name": "Leningradskoye sh 40",
+            "type": "Stop"
+        },
+        {
+            "id": 802630252,
+            "name": "NmBF4ZOAqEVk0UI J",
+            "type": "Stop"
+        },
+        {
+            "from": "Pr Vernadskogo 60",
+            "id": 799933121,
+            "to": "Sokol",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 20",
+            "id": 239606326,
+            "to": "Ostozhenka 70",
+            "type": "Route"
+        },
+        {
+            "id": 2067887205,
+            "name": "Mokhovaya ul 80",
+            "type": "Stop"
+        },
+        {
+            "id": 1766990604,
+            "name": "Leningradskiy pr 10",
+            "type": "Stop"
+        },
+        {
+            "id": 564351016,
+            "name": "Kiyevskoye sh 80",
+            "type": "Stop"
+        },
+        {
+            "from": "Mokhovaya ul 80",
+            "id": 188241234,
+            "to": "Mezhdunarodnoye sh 80",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 30",
+            "id": 839026458,
+            "to": "Pr Vernadskogo 10",
+            "type": "Route"
+        },
+        {
+            "id": 353672929,
+            "name": "16k",
+            "type": "Bus"
+        },
+        {
+            "id": 438693796,
+            "name": "46k",
+            "type": "Bus"
+        },
+        {
+            "id": 231005000,
+            "name": "90k",
+            "type": "Bus"
+        },
+        {
+            "from": "Komsomolskiy pr 20",
+            "id": 1268978483,
+            "to": "Tverskaya ul 40",
+            "type": "Route"
+        },
+        {
+            "id": 2102040328,
+            "name": "67",
+            "type": "Bus"
+        },
+        {
+            "from": "Pr Vernadskogo 50",
+            "id": 550535315,
+            "to": "Kiyevskoye sh 50",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskiy pr 100",
+            "id": 1302314936,
+            "to": "Pr Vernadskogo 30",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 70",
+            "id": 1574151042,
+            "to": "Mokhovaya ul 20",
+            "type": "Route"
+        },
+        {
+            "from": "Vnukovo",
+            "id": 862413581,
+            "to": "Tverskaya ul 30",
+            "type": "Route"
+        },
+        {
+            "from": "Tverskaya ul 70",
+            "id": 1923207176,
+            "to": "Leningradskiy pr 40",
+            "type": "Route"
+        },
+        {
+            "from": "Mezhdunarodnoye sh 100",
+            "id": 2075740716,
+            "to": "Mezhdunarodnoye sh 40",
+            "type": "Route"
+        },
+        {
+            "id": 1396785474,
+            "name": "Ostozhenka 40",
+            "type": "Stop"
+        },
+        {
+            "id": 474099276,
+            "name": "26",
+            "type": "Bus"
+        },
+        {
+            "from": "Mokhovaya ul 60",
+            "id": 1756780026,
+            "to": "Tverskaya ul 20",
+            "type": "Route"
+        },
+        {
+            "from": "Ostozhenka 60",
+            "id": 454217366,
+            "to": "Ostozhenka 70",
+            "type": "Route"
+        },
+        {
+            "id": 139773181,
+            "name": "ur9xdmEH58LEnic6OWw",
+            "type": "Stop"
+        },
+        {
+            "from": "Troparyovo",
+            "id": 1596665987,
+            "to": "Mokhovaya ul 60",
+            "type": "Route"
+        },
+        {
+            "from": "Mokhovaya ul 70",
+            "id": 415171915,
+            "to": "Leningradskiy pr 20",
+            "type": "Route"
+        },
+        {
+            "from": "Ostozhenka 80",
+            "id": 1174335662,
+            "to": "Komsomolskiy pr 20",
+            "type": "Route"
+        },
+        {
+            "from": "Pr Vernadskogo 10",
+            "id": 1081614565,
+            "to": "Komsomolskiy pr 70",
+            "type": "Route"
+        },
+        {
+            "id": 1742458421,
+            "name": "44",
+            "type": "Bus"
+        },
+        {
+            "from": "Kiyevskoye sh 90",
+            "id": 1618409648,
+            "to": "Leningradskiy pr 20",
+            "type": "Route"
+        },
+        {
+            "from": "Komsomolskiy pr 80",
+            "id": 776544930,
+            "to": "Ostozhenka 100",
+            "type": "Route"
+        },
+        {
+            "id": 819430422,
+            "name": "19k",
+            "type": "Bus"
+        },
+        {
+            "id": 1660040291,
+            "name": "Komsomolskiy pr 20",
+            "type": "Stop"
+        },
+        {
+            "from": "Leningradskoye sh 20",
+            "id": 1770636148,
+            "to": "Kiyevskoye sh 70",
+            "type": "Route"
+        },
+        {
+            "from": "Leningradskoye sh 80",
+            "id": 585637,
+            "to": "Pr Vernadskogo 20",
+            "type": "Route"
+        },

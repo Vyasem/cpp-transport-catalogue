@@ -12,8 +12,10 @@ namespace catalog {
 	TransportCatalogue::TransportCatalogue() {}
 
 	void TransportCatalogue::AddStop(std::string_view stopName, geo::Coordinates coordinates) {
-		stopStorage.push_back(domain::Stop{std::string(stopName), coordinates});
+		size_t stopId = stopStorage.size();
+		stopStorage.push_back(domain::Stop{std::string(stopName), coordinates, stopId });
 		stops[stopStorage.back().name] = &stopStorage.back();
+		++uniqueStopCount;
 	}
 
 	void TransportCatalogue::AddRoute(std::string_view routeName, std::deque<std::string_view> stopsName, bool loope) {
@@ -21,6 +23,7 @@ namespace catalog {
 		for (auto it = stopsName.begin(); it != stopsName.end(); ++it) {
 			newStops.push_back(StopFind(*it));
 		}
+		routesStopCount += newStops.size();
 		busStorage.push_back(domain::Bus{ std::string(routeName) , std::move(newStops), loope});
 		routes[busStorage.back().name] = &busStorage.back();
 	}
@@ -96,7 +99,7 @@ namespace catalog {
 		return result;
 	}
 
-	int TransportCatalogue::GetDistance(domain::Stop* stopFrom, domain::Stop* stopTo) {
+	double TransportCatalogue::GetDistance(const domain::Stop* stopFrom, const domain::Stop* stopTo) {
 		if (distanceBwStops.find({stopFrom, stopTo}) != distanceBwStops.end()) {
 			return distanceBwStops.at({stopFrom, stopTo});
 		}
@@ -118,6 +121,10 @@ namespace catalog {
 			return lhs->name < rhs->name;
 		});
 		return result;
+	}
+
+	size_t TransportCatalogue::GetUniqueStopCount() {
+		return uniqueStopCount;
 	}
 }
 }

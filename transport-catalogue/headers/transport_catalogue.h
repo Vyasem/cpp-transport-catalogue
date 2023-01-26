@@ -14,7 +14,9 @@ namespace catalog {
 		std::unordered_map<std::string_view, domain::Stop*> stops;			
 		std::deque<domain::Stop> stopStorage;
 		std::deque<domain::Bus> busStorage;
-		std::unordered_map<std::pair<domain::Stop*, domain::Stop*>, int, domain::StopLengthHasher> distanceBwStops;
+		std::unordered_map<std::pair<const domain::Stop*, const domain::Stop*>, int, domain::StopLengthHasher> distanceBwStops;
+		size_t uniqueStopCount = 0;
+		size_t routesStopCount = 0;
 	public:
 		explicit TransportCatalogue();
 		void AddStop(std::string_view stopName, const geo::Coordinates coordinates);
@@ -24,8 +26,9 @@ namespace catalog {
 		const domain::Stop* StopFind(std::string_view stopName)const;
 		const domain::Route GetRoute(std::string_view busName);
 		const std::deque<std::string_view> GetStopBuses(std::string_view stopName);
-		int GetDistance(domain::Stop* stopFrom, domain::Stop* stopTo);
+		double GetDistance(const domain::Stop* stopFrom, const domain::Stop* stopTo);
 		std::deque<const domain::Bus*> GetAllRoutes();
+		size_t GetUniqueStopCount();
 	};
 }	
 }

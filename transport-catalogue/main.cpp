@@ -6,6 +6,7 @@
 #include "headers/domain.h"
 #include "headers/map_renderer.h"
 #include "headers/transport_catalogue.h"
+#include "headers/log_duration.h";
 
 #include <iostream>
 #include <fstream>
@@ -16,6 +17,7 @@
 #include <sstream>
 #include <unordered_map>
 #include <iomanip>
+#include <map>
 
 void inputTest() {
 	transport::catalog::TransportCatalogue tCatalog;	
@@ -37,8 +39,7 @@ void inputTest() {
 
 void jsonTest() {
 	transport::catalog::TransportCatalogue tCatalog;
-	transport::render::MapRenderer map;
-	transport::request::RequestHandler handler(tCatalog, map);
+	transport::request::RequestHandler handler(tCatalog);
 	std::string filename = "cpp-transport-catalogue/transport-catalogue/Examples/test_json.json";
 	std::fstream fs;
 	fs.open(filename);
@@ -50,10 +51,24 @@ void jsonTest() {
 	}
 }
 
+void RouteTest() {
+	transport::catalog::TransportCatalogue tCatalog;
+	transport::request::RequestHandler handler(tCatalog);
+	std::string filename = "cpp-transport-catalogue/transport-catalogue/Examples/test_graph.json";
+	std::fstream fs;
+	fs.open(filename);
+	if (fs.is_open()) {
+		transport::json_reader::JsonReader reader(handler, fs);		
+		reader.HandleDataBase();
+		handler.CreateRoute();
+		reader.HandleQuery();
+		reader.Print(std::cout);
+	}
+}
+
 void svgTest() {
 	transport::catalog::TransportCatalogue tCatalog;
-	transport::render::MapRenderer map;
-	transport::request::RequestHandler handler(tCatalog, map);
+	transport::request::RequestHandler handler(tCatalog);
 	std::string filename = "cpp-transport-catalogue/transport-catalogue/Examples/svg.json";
 	std::fstream fs;
 	fs.open(filename);
@@ -64,9 +79,11 @@ void svgTest() {
 	}
 }
 
+
 int main() {
-	//inputTest();
-	jsonTest();
-	svgTest();
+	//inputTest();	
+	//jsonTest();
+	//svgTest();
+	RouteTest();
 	return 0;
 }
