@@ -1,7 +1,7 @@
 #pragma once
 #include "graph.h"
 #include "domain.h"
-#include "route.h"
+#include "router.h"
 #include "transport_catalogue.h"
 
 #include <unordered_map>
@@ -24,6 +24,9 @@ namespace route {
 	public:
 		Router() = default;
 		void SetSettings(std::unordered_map<std::string, double>&& settings);
+		void SetGraph(graph::DirectedWeightedGraph<double>&& graph_);
+		const std::unordered_map<std::string, double>& GetSettings();
+		const graph::DirectedWeightedGraph<double>& GetGraph();
 		void CreateRoutes(transport::catalog::TransportCatalogue& catalog);
 		void FindRoute(const domain::Stop* from, const domain::Stop* to);
 		const std::optional<domain::Trip>& GetReadyRoute()const;

@@ -39,8 +39,9 @@ namespace domain {
         std::string name = "";
         std::deque<const Stop*> stops = {};
         bool loope = false;
+        size_t id = 0;
         Bus() = default;
-        Bus(std::string_view name_, std::deque<const Stop*> stops_, bool loope_) :name(name_), stops(std::move(stops_)), loope(loope_) {};
+        Bus(std::string_view name_, std::deque<const Stop*> stops_, bool loope_, size_t id_) :name(name_), stops(std::move(stops_)), loope(loope_), id(id_) {};
     };
 
     struct Route {

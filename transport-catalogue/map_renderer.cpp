@@ -17,6 +17,10 @@ namespace render {
 		settings_ = std::move(settings);
 	}
 
+    const std::unordered_map<std::string, domain::SettingType>& MapRenderer::GetSettings() {
+        return settings_;
+    }
+
     const std::set<const domain::Stop*, domain::StopCompare> MapRenderer::GetAllStops(const std::deque<const domain::Bus*>& routes, std::unordered_set<geo::Coordinates, geo::CoordinateshHasher>& allCoord) {
         std::set<const domain::Stop*, domain::StopCompare> result;
         for (const domain::Bus* bus : routes) {

@@ -7,7 +7,6 @@
 #include <vector>
 #include <variant>
 #include <optional>
-#include <execution>
 #include <unordered_set>
 
 namespace json {

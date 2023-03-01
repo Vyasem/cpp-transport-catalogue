@@ -23,8 +23,9 @@ namespace catalog {
 		for (auto it = stopsName.begin(); it != stopsName.end(); ++it) {
 			newStops.push_back(StopFind(*it));
 		}
+		size_t BusId = busStorage.size();
 		routesStopCount += newStops.size();
-		busStorage.push_back(domain::Bus{ std::string(routeName) , std::move(newStops), loope});
+		busStorage.push_back(domain::Bus{ std::string(routeName) , std::move(newStops), loope, BusId});
 		routes[busStorage.back().name] = &busStorage.back();
 	}
 
@@ -32,6 +33,18 @@ namespace catalog {
 		if (stops.find(stopFrom) != stops.end() && stops.find(stopTo) != stops.end()) {
 			distanceBwStops[{stops.at(stopFrom), stops.at(stopTo)}] = distance;
 		}
+	}
+
+	const std::deque<domain::Stop>& TransportCatalogue::GetStopStorage() {
+		return stopStorage;
+	}
+
+	const std::deque<domain::Bus>& TransportCatalogue::GetBusStorage() {
+		return busStorage;
+	}
+
+	const std::unordered_map<std::pair<const domain::Stop*, const domain::Stop*>, int, domain::StopLengthHasher>& TransportCatalogue::GetAllDistance() {
+		return distanceBwStops;
 	}
 
 	const domain::Bus* TransportCatalogue::BusFind(std::string_view busName)const {

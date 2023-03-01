@@ -1,5 +1,6 @@
 #include "headers/request_handler.h"
 #include "headers/map_renderer.h"
+#include "headers/serialization.h"
 #include <vector>
 #include <unordered_map>
 #include <string_view>
@@ -10,7 +11,8 @@
 
 namespace transport {
 namespace request {
-	RequestHandler::RequestHandler(catalog::TransportCatalogue& catalog) : catalog_(catalog){}
+	RequestHandler::RequestHandler(){}
+
 	void RequestHandler::CreateCatalog(const std::unordered_map<std::string_view, std::pair<std::deque<std::string_view>, bool>>& buses,
 		const std::unordered_map<std::string_view, std::pair<double, double>>& stops, 
 		const std::vector<domain::DistanceBwStops>& stopsDistance) {
@@ -27,6 +29,18 @@ namespace request {
 			catalog_.SetDistance(from, to, distance);
 		}
 	}
+
+	void RequestHandler::MakeBase() {
+		Serialization ser(catalog_, map_, route_);
+		CreateRoute();
+		ser.Serialize(serialization_["file"]);
+	}
+
+	void RequestHandler::ProcessRequest() {
+		Serialization ser(catalog_, map_, route_);
+		ser.Deserialize(serialization_["file"]);
+	}
+
 	const domain::Route RequestHandler::GetRoute(const std::string_view& busName) {
 		return catalog_.GetRoute(busName);
 	}
@@ -47,6 +61,10 @@ namespace request {
 
 	void RequestHandler::SetRouteSettings(std::unordered_map<std::string, double> settings) {
 		route_.SetSettings(std::move(settings));
+	}
+
+	void RequestHandler::SetSerializationSettings(std::unordered_map<std::string, std::string_view> settings) {
+		serialization_ = std::move(settings);
 	}
 
 	void RequestHandler::CreateRoute() {

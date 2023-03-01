@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package serialize;
+
+message Edge{
+	uint32 from = 1;
+	uint32 to = 2;
+	uint32 from_name_id = 3;
+	uint32 to_name_id = 4;
+	uint32 route_name_id = 5;
+	string route_type = 6;
+	double weight = 7;
+	uint32 stop_count = 8;
+}
+
+message EdgeList{
+	repeated Edge edges = 1;
+}
+
+message Graph{
+	EdgeList edges = 1;
+	uint32 vertex_count = 2;
+}

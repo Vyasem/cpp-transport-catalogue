@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "graph.proto";
+
+package serialize;
+
+message TransportRouter{	
+	map<string, double> settings = 1;
+	Graph graph = 2;
+}

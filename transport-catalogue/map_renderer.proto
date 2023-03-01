@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package serialize;
+
+message BusLableOffset{
+	double dx = 1;
+	double dy = 2;
+}
+
+message StopLabelOffset{
+	double dx = 1;
+	double dy = 2;
+}
+
+message ColorString{
+	string underlayer_color = 1;
+}
+
+message ColorArray{
+	repeated double underlayer_color = 1;
+}
+
+message ColorPallete{
+	ColorString color_string = 1;
+	ColorArray color_array = 2;
+}
+
+message MapRenderer{
+	double width = 1;
+	double height = 2;
+	double padding = 3;
+	double line_width = 4;
+	double stop_radius = 5;
+	int32 bus_label_font_size = 6;
+	BusLableOffset bus_label_offset = 7;
+	int32 stop_label_font_size = 8;
+	StopLabelOffset stop_label_offset = 9;
+	ColorString underlayer_color_string = 10;
+	ColorArray underlayer_color_array = 11;
+	double underlayer_width = 12;
+	repeated ColorPallete color_palette = 13;
+}

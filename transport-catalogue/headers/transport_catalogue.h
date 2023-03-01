@@ -22,6 +22,9 @@ namespace catalog {
 		void AddStop(std::string_view stopName, const geo::Coordinates coordinates);
 		void AddRoute(std::string_view routeName, std::deque<std::string_view> stopsName, bool loope);
 		void SetDistance(std::string_view stopFrom, std::string_view stopTo, int distance);
+		const std::deque<domain::Stop>& GetStopStorage();
+		const std::deque<domain::Bus>& GetBusStorage();
+		const std::unordered_map<std::pair<const domain::Stop*, const domain::Stop*>, int, domain::StopLengthHasher>& GetAllDistance();
 		const domain::Bus* BusFind(std::string_view busName)const;
 		const domain::Stop* StopFind(std::string_view stopName)const;
 		const domain::Route GetRoute(std::string_view busName);

@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+import "map_renderer.proto";
+import "transport_router.proto";
+
+package serialize;
+
+message Coordinates{
+	double lat = 1;
+    double lng = 2;
+}
+
+message Stop{
+	int32 id = 1;
+	string name = 2;
+	Coordinates coordinates = 3;	
+}
+
+message Bus{
+	string name = 1;
+	repeated int32 stops  = 2;
+	bool loop = 3;
+	int32 id = 4;
+}
+
+message DistanceBwStops {
+    int32 fromStop = 1;
+    int32 toStop = 2;
+    int32 distance = 3;
+}
+
+message TransportCatalogue{
+	repeated Stop stopStorage = 1;
+	repeated Bus busStorage = 2;
+	repeated DistanceBwStops distance = 3;
+}
+
+message SeriliazeBlock{
+	TransportCatalogue catalog = 1;
+	MapRenderer map = 2;
+	TransportRouter router = 3;
+}

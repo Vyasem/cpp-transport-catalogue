@@ -90,6 +90,7 @@ namespace render {
 	public:
 		MapRenderer() = default;
 		void SetSettings(std::unordered_map<std::string, domain::SettingType> settings);
+		const std::unordered_map<std::string, domain::SettingType>& GetSettings();
 		void Draw(std::ostream& out, std::deque<const domain::Bus*> routes);		
 	};
 }

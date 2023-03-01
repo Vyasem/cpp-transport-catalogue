@@ -1,12 +1,11 @@
-#include "headers/input_reader.h"
 #include "headers/json_reader.h"
 #include "headers/request_handler.h"
-#include "headers/stat_reader.h"
 #include "headers/json.h"
 #include "headers/domain.h"
 #include "headers/map_renderer.h"
 #include "headers/transport_catalogue.h"
-#include "headers/log_duration.h";
+#include "headers/log_duration.h"
+
 
 #include <iostream>
 #include <fstream>
@@ -19,41 +18,25 @@
 #include <iomanip>
 #include <map>
 
-void inputTest() {
-	transport::catalog::TransportCatalogue tCatalog;	
-	int queryInCount;
-	std::string filename = "cpp-transport-catalogue/transport-catalogue/Examples/test.txt";
-	std::fstream fs;
-	fs.open(filename);
-	if (fs.is_open()) {
-		fs >> queryInCount;
-		fs.get();
-		transport::input_read::InputReader reader(&tCatalog, fs, queryInCount);
-		reader.HandleQuery();
-		reader.ClearQuery();
-		fs >> queryInCount;
-		fs.get();
-		transport::result::StatReader Sreader(&tCatalog, fs, queryInCount);
-	}
-}
+
+using namespace std::string_view_literals;
 
 void jsonTest() {
-	transport::catalog::TransportCatalogue tCatalog;
-	transport::request::RequestHandler handler(tCatalog);
-	std::string filename = "cpp-transport-catalogue/transport-catalogue/Examples/test_json.json";
+	transport::request::RequestHandler handler;
+	std::string filename = "../cpp-transport-catalogue/transport-catalogue/Examples/test_json.json";
 	std::fstream fs;
+	std::ofstream out("../cpp-transport-catalogue/transport-catalogue/Examples/result.json");
 	fs.open(filename);
 	if (fs.is_open()) {		
 		transport::json_reader::JsonReader reader(handler, fs);
 		reader.HandleDataBase();
 		reader.HandleQuery();
-		reader.Print(std::cout);
+		reader.Print(out);
 	}
 }
 
 void RouteTest() {
-	transport::catalog::TransportCatalogue tCatalog;
-	transport::request::RequestHandler handler(tCatalog);
+	transport::request::RequestHandler handler;
 	std::string filename = "cpp-transport-catalogue/transport-catalogue/Examples/test_graph.json";
 	std::fstream fs;
 	fs.open(filename);
@@ -67,8 +50,7 @@ void RouteTest() {
 }
 
 void svgTest() {
-	transport::catalog::TransportCatalogue tCatalog;
-	transport::request::RequestHandler handler(tCatalog);
+	transport::request::RequestHandler handler;
 	std::string filename = "cpp-transport-catalogue/transport-catalogue/Examples/svg.json";
 	std::fstream fs;
 	fs.open(filename);
@@ -79,11 +61,52 @@ void svgTest() {
 	}
 }
 
+void PrintUsage(std::ostream& stream = std::cerr) {
+	stream << "Usage: transport_catalogue [make_base|process_requests]\n"sv;
+}
 
-int main() {
-	//inputTest();	
-	//jsonTest();
-	//svgTest();
-	RouteTest();
+void MakeBase() {
+	transport::request::RequestHandler handler;
+	std::string inFilename = "D:/Project_C/Yandex_C++/Projects/Sprint9/TransportDirectory/cpp-transport-catalogue/transport-catalogue/Examples/make_base.json";	
+	std::ifstream input;
+	input.open(inFilename);
+	if (input.is_open()) {
+		transport::json_reader::JsonReader reader(handler, input);
+		reader.HandleDataBase();
+		handler.MakeBase();
+	}
+}
+
+void ProcessRequests() {
+	transport::request::RequestHandler handler;
+	std::string inFilename = "D:/Project_C/Yandex_C++/Projects/Sprint9/TransportDirectory/cpp-transport-catalogue/transport-catalogue/Examples/process_requests.json";
+	std::ifstream input;
+	input.open(inFilename);
+	if (input.is_open()) {
+		transport::json_reader::JsonReader reader(handler, input);
+		handler.ProcessRequest();
+		reader.HandleQuery();
+		std::ofstream out("process_requests_result.json");
+		reader.Print(out);
+	}	
+}
+
+int main(int argc, char* argv[]) {	
+	//ProcessRequests();
+	if (argc != 2) {
+		PrintUsage();
+		return 1;
+	}
+
+	const std::string_view mode(argv[1]);
+
+	if (mode == "make_base"sv) {		
+		MakeBase();
+	}else if (mode == "process_requests"sv) {		
+		ProcessRequests();
+	}else {
+		PrintUsage();
+		return 1;
+	}
 	return 0;
 }

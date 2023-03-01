@@ -2,7 +2,9 @@
 #include "headers/svg.h"
 #include "headers/json.h"
 #include "headers/json_builder.h"
+
 #include <iostream>
+#include <string_view>
 #include <string>
 #include <unordered_map>
 #include <deque>
@@ -12,35 +14,82 @@
 #include <optional>
 #include <variant>
 #include <sstream>
-#include <execution>
+#include <filesystem>
 
 using namespace std::string_literals;
 
 namespace transport {
 namespace json_reader {
-	JsonReader::JsonReader(request::RequestHandler& handler, std::istream& input) : handler_(handler), input_(input){
-		HandleStream();
+	JsonReader::JsonReader(request::RequestHandler& handler, std::istream& input) : handler_(handler), 
+		input_(input), jsonObject_(json::Load(input_)){
+		PrepareSerializationSettings();
 	}
 
-	void JsonReader::HandleStream() {
-		json::Document jsonObject = json::Load(input_);
-		data_ = jsonObject.GetRoot().AsMap().at("base_requests");
-		query_ = jsonObject.GetRoot().AsMap().at("stat_requests");
-		
-		try {
-			PrepareSettings(jsonObject.GetRoot().AsMap().at("render_settings"));
-		}catch (...) {}
-
-		try {
-			PrepareRouteSettings(jsonObject.GetRoot().AsMap().at("routing_settings"));
+	void JsonReader::HandleDataBase() {		
+		for (const json::Node& item : jsonObject_.GetRoot().AsMap().at("base_requests").AsArray()) {
+			const std::string& type = item.AsMap().at("type").AsString();
+			const std::string& name = item.AsMap().at("name").AsString();
+			if (type == "Stop") {
+				double latitude = item.AsMap().at("latitude").AsDouble();
+				double longtitude = item.AsMap().at("longitude").AsDouble();
+				stops_[name] = { latitude, longtitude };
+				try {
+					const json::Dict& roadDistance = item.AsMap().at("road_distances").AsMap();
+					for (const auto& [toStop, dictance] : roadDistance) {
+						stopsDistance_.push_back(domain::DistanceBwStops{ name, toStop,  dictance.AsInt() });
+					}
+				}
+				catch (...) {}
+			}
+			else {
+				std::deque<std::string_view> busStops;
+				for (const json::Node& busItemStop : item.AsMap().at("stops").AsArray()) {
+					busStops.push_back(busItemStop.AsString());
+				}
+				buses_[name] = { busStops, item.AsMap().at("is_roundtrip").AsBool() };
+			}
 		}
-		catch (...) {}
+		handler_.CreateCatalog(buses_, stops_, stopsDistance_);
+		PrepareSettings();
 	}
 
-	void JsonReader::PrepareSettings(const json::Node jsonSettings) {
+	void JsonReader::HandleQuery() {
+		json::Array result;
+		for (const json::Node& item : jsonObject_.GetRoot().AsMap().at("stat_requests").AsArray()) {
+			std::string_view type = item.AsMap().at("type").AsString();
+			if (type == "Stop") {
+				HandleStopQuery(item, result);
+			}
+			else if (type == "Bus") {
+				HandleBusQuery(item, result);
+			}
+			else if (type == "Map") {
+				HandleMapQuery(item, result);
+			}
+			else if (type == "Route") {
+				HandleRouteQuery(item, result);
+			}
+		}
+		nodeResul_ = json::Node(result);
+	}
+
+	void JsonReader::PrepareSettings() {
+		PrepareRenderSettings(jsonObject_.GetRoot().AsMap().at("render_settings"));
+		PrepareRouteSettings(jsonObject_.GetRoot().AsMap().at("routing_settings"));
+	}
+
+	void JsonReader::PrepareSerializationSettings() {
+		std::unordered_map<std::string, std::string_view> result;
+		for (const auto& [key, value] : jsonObject_.GetRoot().AsMap().at("serialization_settings").AsMap()) {
+			result[key] = value.AsString();
+		}
+		handler_.SetSerializationSettings(result);
+	}
+
+	void JsonReader::PrepareRenderSettings(const json::Node renderSettings) {
 		std::unordered_map<std::string, domain::SettingType> settings;	
 
-		for (const auto& [key, value] : jsonSettings.AsMap()) {
+		for (const auto& [key, value] : renderSettings.AsMap()) {
 			if (key == "color_palette") {
 				std::vector<svg::Color> colorPalette;
 				for (const json::Node& itemColor : value.AsArray()) {
@@ -101,32 +150,7 @@ namespace json_reader {
 			}
 		}
 		handler_.SetRouteSettings(settings);
-	}
-
-	void JsonReader::HandleDataBase() {
-		for (const json::Node& item : data_->AsArray()) {
-			const std::string& type = item.AsMap().at("type").AsString();
-			const std::string& name = item.AsMap().at("name").AsString();
-			if (type == "Stop") {
-				double latitude = item.AsMap().at("latitude").AsDouble();
-				double longtitude = item.AsMap().at("longitude").AsDouble();
-				stops_[name] = { latitude, longtitude };
-				try {
-					const json::Dict& roadDistance = item.AsMap().at("road_distances").AsMap();
-					for (const auto& [toStop,dictance] : roadDistance) {
-						stopsDistance_.push_back(domain::DistanceBwStops{ name, toStop,  dictance.AsInt()});
-					}
-				}catch (...) {}
-			}else{
-				std::deque<std::string_view> busStops;
-				for (const json::Node& busItemStop : item.AsMap().at("stops").AsArray()) {
-					busStops.push_back(busItemStop.AsString());
-				}
-				buses_[name] = {busStops, item.AsMap().at("is_roundtrip").AsBool()};
-			}
-		}
-		handler_.CreateCatalog(buses_, stops_, stopsDistance_);	
-	}
+	}	
 
 	void JsonReader::HandleStopQuery(const json::Node& stop, json::Array& saveConatiner){
 		int id = stop.AsMap().at("id").AsInt();
@@ -142,8 +166,7 @@ namespace json_reader {
 					.Value(json::Array{})
 				.EndDict()
 				.Build());
-			}
-			else {
+			}else {
 				saveConatiner.push_back(json::Builder{}
 				.StartDict()
 					.Key("request_id"s)
@@ -153,8 +176,7 @@ namespace json_reader {
 				.EndDict()
 				.Build());
 			}
-		}
-		else {			
+		}else {			
 			saveConatiner.push_back(json::Builder{}
 			.StartDict()
 				.Key("request_id"s)
@@ -179,8 +201,7 @@ namespace json_reader {
 				.Value("not found"s)
 			.EndDict()
 			.Build());
-		}
-		else {
+		}else {
 			saveConatiner.push_back(json::Builder{}
 			.StartDict()
 				.Key("request_id"s)
@@ -262,25 +283,12 @@ namespace json_reader {
 		}
 	}
 
-	void JsonReader::HandleQuery() {
-		json::Array result;
-		for (const json::Node& item : query_->AsArray()) {
-			std::string_view type = item.AsMap().at("type").AsString();
-			if (type == "Stop") {
-				HandleStopQuery(item, result);
-			}else if (type == "Bus") {
-				HandleBusQuery(item, result);
-			}else if (type == "Map") {
-				HandleMapQuery(item, result);
-			}else if (type == "Route") {			
-				HandleRouteQuery(item, result);
-			}
-		}
-		nodeResul_ = json::Node(result);
-	}
-
 	void JsonReader::Print(std::ostream& output) {
 		json::PrintNode(nodeResul_, output);
+	}
+
+	std::string_view JsonReader::GetSerializePath() {		
+		return jsonObject_.GetRoot().AsMap().at("serialization_settings").AsMap().at("file").AsString();
 	}
 }
 }

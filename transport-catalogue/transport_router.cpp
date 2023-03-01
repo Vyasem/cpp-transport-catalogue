@@ -1,6 +1,6 @@
-#include "headers/transport_route.h"
+#include "headers/transport_router.h"
 #include "headers/graph.h"
-#include "headers/route.h"
+#include "headers/router.h"
 #include "headers/transport_catalogue.h"
 
 #include <unordered_map>
@@ -15,6 +15,19 @@ namespace transport {
 namespace route {
 	void Router::SetSettings(std::unordered_map<std::string, double>&& settings) {
 		settings_ = std::move(settings);
+	}
+
+	void Router::SetGraph(graph::DirectedWeightedGraph<double>&& graph_) {
+		graph = std::move(graph_);
+		routerFinder = std::make_unique<graph::Router<double>>(graph);
+	}
+
+	const std::unordered_map<std::string, double>& Router::GetSettings() {
+		return settings_;
+	}
+
+	const graph::DirectedWeightedGraph<double>& Router::GetGraph() {
+		return graph;
 	}
 
 	void Router::CreateWaitEdge(graph::VertexId fromId, graph::VertexId toId, std::string_view name, double weight) {
